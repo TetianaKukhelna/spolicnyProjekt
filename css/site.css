@@ -1,6 +1,7 @@
 html, body{
 	margin-left: auto;
 	margin-right: auto;
+	min-width: 20em;
 }
 
 header{
@@ -9,6 +10,21 @@ header{
 
 h1{
 	text-align: center;
+}
+
+section, aside{
+	text-align: center;
+	padding: 1em 0em;
+	min-width: 15em;
+}
+
+aside{
+
+position:absolute;
+right:0;
+bottom:0;
+text-align:center;
+display:block;
 }
 
 footer{
@@ -20,4 +36,76 @@ footer{
   	text-align: center;
   	padding: 1em 0em;
 	z-index: 1000;
+	min-width: 30em;
 }
+
+/*Resize page by width*/
+
+.content{
+	min-height: 45em;
+}
+
+@media screen and (max-width: 1200px){
+	.content{
+		min-height: 45em;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.content{
+		min-height: 40em;
+	}
+}
+
+/*Inputs name-day*/
+
+.input-num-nameday{
+	width: 4em;
+}
+
+.input-txt-nameday{
+	width: 10em;
+}
+
+/*Center div*/
+
+.cen-div{
+	margin: auto;
+	padding: 1em;
+}
+
+/*Game links*/
+
+.href-img-game{
+	padding: 1em;
+	width: 300px;
+}
+
+/*Autors*/
+.img-left{
+	float: left;
+}
+
+.img-right{
+	float: right;
+}
+
+/*Fixes*/
+/*class 'row' - has left-margin and right-margin value 15. This disable margin.*/
+.margin-scroll{ 
+	margin: 0px;
+}
+/*text - not fit in div's, need use word-wrap to avoid overflow text*/
+.text-in-div{ 
+	word-wrap: break-word;
+}
+
+/*Debug - testing*/
+section, aside{
+	border: solid 1px black;
+}
+
+.img-left, .img-right{
+	width: 150px;
+}
+
