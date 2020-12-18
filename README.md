@@ -7,3 +7,6 @@
 
 ## Background
 1. https://mycolor.space/gradient?ori=to+left+top&hex=%23051937&hex2=%23A8EB12&sub=1
+
+## Fix this
+- footer responzívnosť: pri f12 sa kontext prekrýva s footrom
