@@ -100,6 +100,11 @@ footer{
 	word-wrap: break-word;
 }
 
+/*input divs - blinking divs when reload page*/
+#div_28, #div_29, #div_30{
+	display: none;
+}
+
 /*Debug - testing*/
 section, aside{
 	border: solid 1px black;
