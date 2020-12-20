@@ -1,50 +1,29 @@
 $(document).ready(function(){
 	var date = new Date();
-	var dayOfYear = daysInYear(date);
+	
+	// Code for set name + date for day
+	document.getElementById("nameday_date_and_name").innerHTML = date.getDate() + "." + (date.getMonth()+1) + "." + date.getFullYear();
+	
+	$.ajax({
+		type:"GET",
+     	url: "xml/name_days.xml",
+     	dataType: "xml",
+     	success: function(xml){
+            // Filter day out of the zaznam
+            var myXML = $(xml).find("zaznam").filter(function() {
+                return $(this).find('den').text() == getCorrectDate(1);;
+            });
 
-	var xhttp  = new XMLHttpRequest();
-	xhttp.open('GET', 'xml/name_days.xml');
-	xhttp.onreadystatechange = function() {
-	   	var response = xhttp.responseText,
-	       	parser = new DOMParser(),
-	       	xmlDoc = parser.parseFromString(response,"text/xml");
+            // Store a string with name info in the display variable
+            var display = myXML.children().map(function() {
+            	if(this.tagName == "SK")
+                	return $(this).text(); //return this.tagName + '=' + $(this).text();
+            }).get().join(' ');
 
-	       	//here is my code
-	       	document.getElementById("nameday_date").innerHTML = date.getDate() + ". " + (date.getMonth()+1) + ". " + date.getFullYear();
-	       	document.getElementById("nameday_name").innerHTML = xmlDoc.getElementsByTagName("SK")[parseInt(dayOfYear)].childNodes[0].nodeValue;
-	}
-	xhttp.send();
+            document.getElementById("nameday_date_and_name").innerHTML += " " + display;
+        }
+  	});
 });
-
-/*Count days in year*/
-function daysInYear(date) {
-	var days = 0;
-	var ary_months = [
-        31, //jan
-        28, //feb(non leap)
-        31, //march
-        30, //april
-        31, //may
-        30, //june
-        31, //july
-        31, //aug
-        30, //sep
-        31, //oct
-        30, //nov   
-        31  //dec   
-    ];
-
-    if(date.getMonth()+1 > 1 && date.getFullYear() % 4 == 0) 
-		days += 1;
-
-	for(var i = 0; i < date.getMonth(); i++){
-		days += ary_months[i];
-	}
-
-	days += date.getDate();
-
-	return days;
-};
 
 /*After input month, it change '.style.dispaly' to "none"/"block" for each div(need for max days).*/
 function val_month(val){
@@ -54,13 +33,17 @@ function val_month(val){
 			if(date.getFullYear() % 4 == 0){
 				document.getElementById("div_28").style.display = "none";
 				document.getElementById("div_29").style.display = "block";
+				document.getElementById("div_30").style.display = "none";
+				document.getElementById("div_31").style.display = "none";
+				return 29;
 			}
 			else{
 				document.getElementById("div_28").style.display = "block";
 				document.getElementById("div_29").style.display = "none";
+				document.getElementById("div_30").style.display = "none";
+				document.getElementById("div_31").style.display = "none";
+				return 28;
 			}
-			document.getElementById("div_30").style.display = "none";
-			document.getElementById("div_31").style.display = "none";
 			break;
 		case 4:
 		case 6:
@@ -70,6 +53,7 @@ function val_month(val){
 			document.getElementById("div_29").style.display = "none";
 			document.getElementById("div_30").style.display = "block";
 			document.getElementById("div_31").style.display = "none";
+			return 30;
 			break;
 		case 1:
 		case 3:
@@ -82,34 +66,156 @@ function val_month(val){
 			document.getElementById("div_29").style.display = "none";
 			document.getElementById("div_30").style.display = "none";
 			document.getElementById("div_31").style.display = "block";
+			return 31;
 			break;
 	}
 }
 
 /*Find name by date*/
 function find_by_date(){
-	var a = document.getElementById("input_month");
-	var b = document.getElementById("div_29");
-	var c = document.getElementById("div_30");
-	var d = document.getElementById("div_31");
-	var xhttp  = new XMLHttpRequest();
-	xhttp.open('GET', 'xml/name_days.xml');
-	xhttp.onreadystatechange = function() {
-	   var response = xhttp.responseText,
-	       parser = new DOMParser(),
-	       xmlDoc = parser.parseFromString(response,"text/xml");
+	
+	var option = val_month(document.getElementById("input_month"));
+	var month_days; // Days in month
 
-	       //here is my code
-	       
+	if(option == 28){
+		month_days = document.getElementById("input_day28").value;
 	}
-	xhttp.send();
+	else if(option == 29){
+		month_days = document.getElementById("input_day29").value;
+	}
+	else if(option == 30){
+		month_days = document.getElementById("input_day30").value;
+	}
+	else if(option == 31){
+		month_days = document.getElementById("input_day31").value;
+	}
+
+	var month = document.getElementById("input_month").value;
+	var tmp = ""; // Create string for next step - searching in xml
+	if(month < 10){
+		if(month_days < 10){
+			tmp = "0" + month + "0" + month_days;
+		}else{
+			tmp = "0" + month + month_days;
+		}
+	}else{
+		if(month_days < 10){
+			tmp = month + "0" + month_days;
+		}else{
+			tmp = month + month_days;
+		}
+	}
+	
+	// Set div to name for finded name
+	searchXMLname(tmp.toString());
+}
+
+/*Function for create date with correct format (ex. 0102, 0120, 1025)*/
+function getCorrectDate(choice){
+	var date;
+	var month;
+	var month_days;
+	if(choice == 1){ // Set date by current day
+		date = new Date();
+		month = date.getMonth()+1;
+		month_days = date.getDate();
+	}
+	else if(choice == 2){ // Set date by input
+		var month = document.getElementById("input_month").value;
+		var month_days = val_month(month);
+	}
+	var tmp = ""; // Create string for next step - searching in xml
+	if(month < 10){
+		if(month_days < 10){
+			tmp = "0" + month + "0" + month_days;
+		}else{
+			tmp = "0" + month + ""+ month_days;
+		}
+	}else{
+		if(month_days < 10){
+			tmp = month + "0" + month_days;
+		}else{
+			tmp = month + "" + month_days;
+		}
+	}
+	return tmp.toString();
+}
+
+/*Function for searching SK name by date*/
+function searchXMLname(tmp){
+	$.ajax({
+		type:"GET",
+     	url: "xml/name_days.xml",
+     	dataType: "xml",
+     	success: function(xml){
+            // Filter day out of the zaznam
+            var myXML = $(xml).find("zaznam").filter(function() {
+                return $(this).find('den').text() == tmp;
+            });
+
+            // Store a string with name info in the display variable
+            var display = myXML.children().map(function() {
+            	if(this.tagName == "SK")
+                	return $(this).text(); //return this.tagName + '=' + $(this).text();
+            }).get().join(' ');
+
+            document.getElementById("nameday_find").innerHTML = "Meno podľa dátumu: " + display;
+        }
+  	});
+}
+
+/*Find date by name*/
+function find_by_name(){
+	$.ajax({
+		type:"GET",
+     	url: "xml/name_days.xml",
+     	dataType: "xml",
+     	success: function(xml){
+            // Filter day out of the zaznam
+            /*var myXML = $(xml).find("zaznam").filter(function() {
+            	console.log($(this).find('den').text());
+                return $(this).find('den').text();
+            });*/
+            var myXML = $(xml).find("zaznam").filter(function() {
+                return $(this).find('den').text().indexOf(document.getElementById("name_input").value.toLowerCase());
+            });
+
+            // Store a string with name info in the display variable
+            var display = myXML.children().map(function() {
+            	/*----------------------------TU OPRAVIT - ZLE VYHLADAVA MENA----------------------------*/
+            	if(this.tagName == "SK" && $(this).text().toString().toLowerCase().indexOf(document.getElementById("name_input").value.toLowerCase()) == 0)
+                	return $(this).text(); //return this.tagName + '=' + $(this).text();
+                /*---------------------------------------------------------------------------------------*/
+            }).get().join(' ');
+
+            document.getElementById("nameday_find").innerHTML = "Dátum podľa mena: " + display;
+        }
+  	});
+}
+
+/*Validation for input month*/
+function validate_input_month(val){
+	if(val.value < 1 || 12 < val.value){
+		val.value = 1;
+	}
+}
+
+/*Validation for each input day*/
+function validate_input_day(val, max_day){
+	if(val.value < 1 || max_day < val.value){
+		val.value = 1;
+	}
 }
 
 /*
 	===TODO===
-	- Skúsiť zvoliť inú metodiku hľadania menín, tým pádom
-		upraviť funkciu "find_by_date()" a miesta, kde sa
-		využívala funkcia pre XMLHttpRequest().
-	- Validovať vstupy pre mesiace a dni, aby užívateľ
-		neprekročil cez limit 1 - 12 a 1 - 28/29/30/31
+	- Ak užívateľ nezadá žiadny input a stlačí
+		vyhľadávať, v tom prípade vypíše error
+		o tom, že sa tam nič nenachádza(FIX THIS)
+	- Opraviť vyhľadávanie podľa mena, zatiaľ
+		nie je funkčné.
+	
+	===ASK_TEAM===
+	- Pridať aj sviatky? (V prípade 1.1. nevypíše 
+		žiadne meniny)
 */
