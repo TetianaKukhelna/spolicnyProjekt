@@ -1,4 +1,4 @@
-# Spoločný projekt
+# Spoločný projekt - *ak chceš, aby vypisovalo všetko správne, treba ho dať na web(napr. súkromný alebo na localhost)*
 
 ## Color picker
 1. https://color.adobe.com/create/color-wheel
@@ -14,3 +14,5 @@
 
 ## Fix this
 - footer responzívnosť: pri f12 sa kontext prekrýva s footrom
+- zlé zobrazovania menín: dni v roku ukazuje správne(ale o 4 dni posunuté), (asi) použiť inú metodiku v hľadaní mena
+- *ERROR* Uncaught TypeError: pri vypisovaní dát ich vypíše, ale zároveň napíše, že nenašlo 'childNodes'
