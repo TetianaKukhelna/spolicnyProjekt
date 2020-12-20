@@ -13,6 +13,6 @@
 2. css @media print by to malo obsahovat, aby bolo odstranene menu, paticka a podobne veci, ktore pre tlac nie su zaujimave.
 
 ## Fix this
-- footer responzívnosť: pri f12 sa kontext prekrýva s footrom
-- zlé zobrazovania menín: dni v roku ukazuje správne(ale o 4 dni posunuté), (asi) použiť inú metodiku v hľadaní mena
-- *ERROR* Uncaught TypeError: pri vypisovaní dát ich vypíše, ale zároveň napíše, že nenašlo 'childNodes'
+- footer responzívnosť  : Pri f12 sa kontext prekrýva s footrom
+- inputs                : Ak užívateľ nezadá žiadny input a stlačí vyhľadávať, v tom prípade vypíše error o tom, že sa tam nič nenachádza(FIX THIS)
+- find by name          : Opraviť vyhľadávanie podľa mena, zatiaľ nie je funkčné.
