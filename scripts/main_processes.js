@@ -207,6 +207,24 @@ function validate_input_day(val, max_day){
 	}
 }
 
+const template = document.createElement('template');
+template.innerHTML = 
+
+class Nameday extends HTMLElement {
+	constructor(){
+		super();
+		this.attachShadow({mode: 'open'});
+		this.shadowRoot.appendChild(template.content.cloneNode(true));
+	}
+
+	connectedCallback(){
+		/*Kod*/
+	}
+}
+
+
+window.customElements.define('nameday', Nameday);
+
 /*
 	===TODO===
 	- Ak užívateľ nezadá žiadny input a stlačí

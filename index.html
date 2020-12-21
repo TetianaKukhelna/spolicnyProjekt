@@ -37,23 +37,23 @@
 				<div class="row">
 					<div class="cen-div">
 						<label>Mesiac</label><br>
-						<input type="number" id="input_month" class="input-num-nameday" placeholder="1" min="1" max="12" onchange="val_month(this);validate_input_month(this);">
+						<input type="number" id="input_month" class="input-num-nameday" placeholder="1" min="1" max="12" onchange="val_month(this);validate_input_month(this);" required>
 					</div>
 					<div class="cen-div" id="div_28"> <!-- 28 -->
 						<label>Deň</label><br>
-						<input type="number" id="input_day28" class="input-num-nameday" placeholder="1" min="1" max="28" onchange="validate_input_day(this, 28);">
+						<input type="number" id="input_day28" class="input-num-nameday" placeholder="1" min="1" max="28" onchange="validate_input_day(this, 28);" required>
 					</div>
 					<div class="cen-div" id="div_29"> <!-- 29 -->
 						<label>Deň</label><br>
-						<input type="number" id="input_day29" class="input-num-nameday" placeholder="1" min="1" max="29" onchange="validate_input_day(this, 29);">
+						<input type="number" id="input_day29" class="input-num-nameday" placeholder="1" min="1" max="29" onchange="validate_input_day(this, 29);" required>
 					</div>
 					<div class="cen-div" id="div_30"> <!-- 30 -->
 						<label>Deň</label><br>
-						<input type="number" id="input_day30" class="input-num-nameday" placeholder="1" min="1" max="30" onchange="validate_input_day(this, 30);">
+						<input type="number" id="input_day30" class="input-num-nameday" placeholder="1" min="1" max="30" onchange="validate_input_day(this, 30);" required>
 					</div>
 					<div class="cen-div" id="div_31"> <!-- 31 -->
 						<label>Deň</label><br>
-						<input type="number" id="input_day31" class="input-num-nameday" placeholder="1" min="1" max="31" onchange="validate_input_day(this, 31);">
+						<input type="number" id="input_day31" class="input-num-nameday" placeholder="1" min="1" max="31" onchange="validate_input_day(this, 31);" required>
 					</div>
 				</div>
 				<strong>alebo</strong>
@@ -68,6 +68,7 @@
 				<br>
 				<div id="nameday_date_and_name"></div>
 				<div id="nameday_find"></div>
+				<nameday></nameday>
 				<br>
 				<div>História</div>
 			</aside>
