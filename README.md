@@ -8,9 +8,10 @@
 ## Background
 1. https://mycolor.space/gradient?ori=to+left+top&hex=%23051937&hex2=%23A8EB12&sub=1
 
-## TODO
+## IMPORTANT
 1. v podstate nieco na styl zadania galeria, kde ste generovali galeriu na zaklade json file. Toto je nieco velmi podobne, akurat budete generovat hlavne menu.
 2. css @media print by to malo obsahovat, aby bolo odstranene menu, paticka a podobne veci, ktore pre tlac nie su zaujimave.
+3. Troj úrovňové menu, zisťovanie menín a počítadlo osobných prístupov budú realizované pomocou vami vytvoreného web komponentu -> komponent, pre každý zvlášť
 
 ## Fix this
 - footer responzívnosť  : Pri f12 sa kontext prekrýva s footrom
