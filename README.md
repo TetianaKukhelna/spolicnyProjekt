@@ -4,15 +4,14 @@
 - https://konvajs.org/docs/sandbox/Animals_on_the_Beach_Game.html (skvelá ukážka + kód)
 
 ## IMPORTANT
-1. v podstate nieco na styl zadania galeria, kde ste generovali galeriu na zaklade json file. Toto je nieco velmi podobne, akurat budete generovat hlavne menu.
-2. css @media print by to malo obsahovat, aby bolo odstranene menu, paticka a podobne veci, ktore pre tlac nie su zaujimave.
+1. Hlavne menu generovane z json file(nieco podobne ako zadania s galeriou)
+2. css "@media print" by mal obsahovat, len to - čo je podstatné pre tlač(čiže odstrániť menu, pätičku, atď..)
 3. Troj úrovňové menu, zisťovanie menín a počítadlo osobných prístupov budú realizované pomocou vami vytvoreného web komponentu -> komponent, pre každý zvlášť
 
 ## Fix this
-- footer responzívnosť  : Pri f12 sa kontext prekrýva s footrom
-- inputs                : Ak užívateľ nezadá žiadny input a stlačí vyhľadávať, v tom prípade vypíše error o tom, že sa tam nič nenachádza(FIX THIS)
-- find by name          : Opraviť vyhľadávanie podľa mena, zatiaľ nie je funkčné.
-
+- [css]     Footer: Pri f12 sa kontext prekrýva s pätičkou
+- [meniny]  Ak užívateľ zadá číslo s predponou 0 napr. 05 03 etc. tak nevyhľadá nič
+- [meniny]  Vložiť kód do web-komponentu
 
 # Color picker
 1. https://color.adobe.com/create/color-wheel
