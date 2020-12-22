@@ -159,9 +159,29 @@ function searchXMLname(tmp){
                 	return $(this).text(); //return this.tagName + '=' + $(this).text();
             }).get().join(' ');
 
-            document.getElementById("nameday_find").innerHTML = "Meno podľa dátumu: " + display;
+            if(display == "")
+            	display = "-";
+            document.getElementById("nameday_find").innerHTML = "Meno podľa dátumu:<br>" + display;
         }
   	});
+}
+
+function getCorrectDateFormatPrint(val, val2){
+	if(val == ""){
+		return ("-");
+	}
+	else{
+		var storage = "";
+		var tmp = val.split(" ");
+		var tmp2 = val2.split("%");
+		for(var i = 0; i < tmp.length; i++){
+			storage += parseInt(tmp[i].toString().slice(0, 2)) + ".";
+			storage += parseInt(tmp[i].toString().slice(2, 4)) + ".";
+			storage += " " + tmp2[i] + "<br>";
+		}
+		return (storage);
+	}
+	
 }
 
 /*Find date by name*/
@@ -172,23 +192,22 @@ function find_by_name(){
      	dataType: "xml",
      	success: function(xml){
             // Filter day out of the zaznam
-            /*var myXML = $(xml).find("zaznam").filter(function() {
-            	console.log($(this).find('den').text());
-                return $(this).find('den').text();
-            });*/
             var myXML = $(xml).find("zaznam").filter(function() {
-                return $(this).find('den').text().indexOf(document.getElementById("name_input").value.toLowerCase());
+                return $(this).find('SK').text().toString().toLowerCase().indexOf(document.getElementById("name_input").value.toLowerCase()) >= 0;
             });
 
-            // Store a string with name info in the display variable
+            // Store a string with date and name info in the display variable
             var display = myXML.children().map(function() {
-            	/*----------------------------TU OPRAVIT - ZLE VYHLADAVA MENA----------------------------*/
-            	if(this.tagName == "SK" && $(this).text().toString().toLowerCase().indexOf(document.getElementById("name_input").value.toLowerCase()) == 0)
-                	return $(this).text(); //return this.tagName + '=' + $(this).text();
-                /*---------------------------------------------------------------------------------------*/
+            	if(this.tagName == "den")
+                	return $(this).text();
             }).get().join(' ');
 
-            document.getElementById("nameday_find").innerHTML = "Dátum podľa mena: " + display;
+            var display2 = myXML.children().map(function() {
+            	if(this.tagName == "SK")
+                	return $(this).text();
+            }).get().join('%');
+
+            document.getElementById("nameday_find").innerHTML = "Dátum podľa mena:<br>" + getCorrectDateFormatPrint(display, display2);
         }
   	});
 }
@@ -207,8 +226,14 @@ function validate_input_day(val, max_day){
 	}
 }
 
+
+/*===Web component template===*/
+/*
 const template = document.createElement('template');
 template.innerHTML = 
+`
+
+`;
 
 class Nameday extends HTMLElement {
 	constructor(){
@@ -218,22 +243,19 @@ class Nameday extends HTMLElement {
 	}
 
 	connectedCallback(){
-		/*Kod*/
+		this.shadowRoot.querySelector('#textinp').addEventListener('change', () => {
+            
+        });
 	}
 }
 
-
 window.customElements.define('nameday', Nameday);
+*/
+
 
 /*
 	===TODO===
-	- Ak užívateľ nezadá žiadny input a stlačí
-		vyhľadávať, v tom prípade vypíše error
-		o tom, že sa tam nič nenachádza(FIX THIS)
-	- Opraviť vyhľadávanie podľa mena, zatiaľ
-		nie je funkčné.
-	
-	===ASK_TEAM===
-	- Pridať aj sviatky? (V prípade 1.1. nevypíše 
-		žiadne meniny)
+	- Ak užívateľ zadá číslo s predponou 0 napr.
+		05 03 etc... tak nevyhľadá nič
+	- Vložiť do web-komponentov
 */
