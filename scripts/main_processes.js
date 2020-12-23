@@ -183,17 +183,27 @@ class Namesday extends HTMLElement {
 			}
 		});
 		this.shadowRoot.querySelector('#find_by_name').addEventListener('click', () => {
-			var name = this.shadowRoot.querySelector("#name_input").value;
-			find_by_name();
+			var name = this.shadowRoot.querySelector("#name_input").value.toLowerCase();
+			if(/^[a-zľščťžýáíéä]+$/i.test(name)){
+				find_by_name();
+			}else{
+				document.getElementById("nameday_find").innerHTML = "Dátum podľa mena:<br>" + "-";
+			}
+			
             /*-------------------------------------------------------------------------------*/
 			function getCorrectDateFormatPrint(val, val2){
-				if(val == ""){
+				if(val.value == ""){
 					return ("-");
 				}
 				else{
 					var storage = "";
 					var tmp = val.split(" ");
 					var tmp2 = val2.split("%");
+
+					if(tmp[0] == ""){
+						return ("-")
+					}
+
 					for(var i = 0; i < tmp.length; i++){
 						storage += parseInt(tmp[i].toString().slice(0, 2)) + ".";
 						storage += parseInt(tmp[i].toString().slice(2, 4)) + ".";
@@ -201,7 +211,6 @@ class Namesday extends HTMLElement {
 					}
 					return (storage);
 				}
-				
 			}
 
 			/*Find date by name*/
