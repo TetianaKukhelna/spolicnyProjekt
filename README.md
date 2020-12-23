@@ -8,10 +8,11 @@
 2. css "@media print" by mal obsahovat, len to - čo je podstatné pre tlač(čiže odstrániť menu, pätičku, atď..)
 3. Troj úrovňové menu, zisťovanie menín a počítadlo osobných prístupov budú realizované pomocou vami vytvoreného web komponentu -> komponent, pre každý zvlášť
 
-## Fix this
-- [css]     Footer: Pri f12 sa kontext prekrýva s pätičkou
-
-
+## TO DO
+1. Menu: Trojurovnove menu -> component
+2. Current date: Zobrazenie dnesneho mena a datumu v bloke .typewriter
+3. Photo + text on pages Autory/Documentation (ku kazdej hre mala dokumentacia)
+4. Zobrazenie histórie prehliadania vo forme path-based breadcrumbs ???
 
 # Color picker
 1. https://color.adobe.com/create/color-wheel
@@ -21,4 +22,3 @@
 # Background
 1. https://mycolor.space/gradient?ori=to+left+top&hex=%23051937&hex2=%23A8EB12&sub=1
 
-grdloiul,k,solwui8l,ko
