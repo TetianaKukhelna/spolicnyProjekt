@@ -9,27 +9,32 @@ template.innerHTML =
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-	<div class="row">
-		<div class="cen-div">
-			<label>Mesiac</label><br>
-			<input type="number" id="input_month" class="input-num-nameday" placeholder="1" min="1" max="12" required>
+	<div class="test">
+		<div class="row" id="row">
+			<div class="cen-div">
+				<label id="font-style">Deň</label><br>
+				<input type="number" id="input_day" class="input-num-nameday" placeholder="1" min="1" max="31" required>
+			</div>
+			<div class="cen-div">
+				<label id="font-style">Mesiac</label><br>
+				<input type="number" id="input_month" class="input-num-nameday" placeholder="1" min="1" max="12" required>
+			</div>
 		</div>
-		<div class="cen-div">
-			<label>Deň</label><br>
-			<input type="number" id="input_day" class="input-num-nameday" placeholder="1" min="1" max="31" required>
+
+		<button id="find_by_date">Hľadať</button>
+		<br>
+		<br>
+		<strong>alebo</strong>
+		<div class="row">
+			<div class="cen-div">
+				<label id="font-style">Meno</label><br>
+				<input type="text" id="name_input" class="input-txt-nameday" placeholder="Max 15 písmen" minlength="1" maxlength="15">
+			</div>
 		</div>
+	<button id="find_by_name">Hľadať</button>
 	</div>
-	<strong>alebo</strong>
-	<div class="row">
-		<div class="cen-div">
-			<label>Meno</label><br>
-			<input type="text" id="name_input" class="input-txt-nameday" placeholder="Max 15 písmen" minlength="1" maxlength="15">
-		</div>
-	</div>
-	<button id="find_by_date">Hľadať podľa dátumu</button>
-	<button id="find_by_name">Hľadať podľa mena</button>
 	<br>
-	<hr>
+
 		
 `;
 
@@ -321,6 +326,10 @@ window.customElements.define('names-day', Namesday);
 
 /*
 	===TODO===
-	
+	*/
 
-*/
+
+
+
+
+	
