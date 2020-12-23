@@ -39,46 +39,12 @@
 					<img alt="hra1" src="img/300x300.png" class="img-right"><p>Tuto môže byť tvoj text, nejaký popis, vlastnosti, na čom si pracoval, čomu sa venuješ, čo si riešil etc. REPEAT Tuto môže byť tvoj text, nejaký popis, vlastnosti, na čom si pracoval, čomu sa venuješ, čo si riešil etc. REPEAT Tuto môže byť tvoj text, nejaký popis, vlastnosti, na čom si pracoval, čomu sa venuješ, čo si riešil etc. REPEAT Tuto môže byť tvoj text, nejaký popis, vlastnosti, na čom si pracoval, čomu sa venuješ, čo si riešil etc.</p>
 				</div>
 			</section>
-
 			<aside class="col-lg-3 col-md-12 col-sm-12">
 				<h3>Zisti meniny</h3>
-				<div class="row">
-					<div class="cen-div">
-						<label>Mesiac</label><br>
-						<input type="number" id="input_month" class="input-num-nameday" placeholder="1" min="1" max="12" onchange="val_month(this);validate_input_month(this);" required>
-					</div>
-					<div class="cen-div" id="div_28"> <!-- 28 -->
-						<label>Deň</label><br>
-						<input type="number" id="input_day28" class="input-num-nameday" placeholder="1" min="1" max="28" onchange="validate_input_day(this, 28);" required>
-					</div>
-					<div class="cen-div" id="div_29"> <!-- 29 -->
-						<label>Deň</label><br>
-						<input type="number" id="input_day29" class="input-num-nameday" placeholder="1" min="1" max="29" onchange="validate_input_day(this, 29);" required>
-					</div>
-					<div class="cen-div" id="div_30"> <!-- 30 -->
-						<label>Deň</label><br>
-						<input type="number" id="input_day30" class="input-num-nameday" placeholder="1" min="1" max="30" onchange="validate_input_day(this, 30);" required>
-					</div>
-					<div class="cen-div" id="div_31"> <!-- 31 -->
-						<label>Deň</label><br>
-						<input type="number" id="input_day31" class="input-num-nameday" placeholder="1" min="1" max="31" onchange="validate_input_day(this, 31);" required>
-					</div>
-				</div>
-				<strong>alebo</strong>
-				<div class="row">
-					<div class="cen-div">
-						<label>Meno</label><br>
-						<input type="text" id="name_input" class="input-txt-nameday" placeholder="Max 15 písmen" minlength="1" maxlength="15">
-					</div>
-				</div>
-				<button onclick="find_by_date()">Hľadať podľa dátumu</button>
-				<button onclick="find_by_name()">Hľadať podľa mena</button>
-				<br>
-				<hr>
+				<names-day></names-day>
 				<div id="nameday_date_and_name"></div>
 				<div id="nameday_find"></div>
-				<!-- <nameday></nameday>         WEB COMPONENT-->
-				<br>
+				<hr>
 				<div>História</div>
 			</aside>
 		</div>
