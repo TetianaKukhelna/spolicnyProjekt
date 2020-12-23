@@ -10,8 +10,8 @@
 
 ## Fix this
 - [css]     Footer: Pri f12 sa kontext prekrýva s pätičkou
-- [meniny]  Ak užívateľ zadá číslo s predponou 0 napr. 05 03 etc. tak nevyhľadá nič
-- [meniny]  Vložiť kód do web-komponentu
+
+
 
 # Color picker
 1. https://color.adobe.com/create/color-wheel
