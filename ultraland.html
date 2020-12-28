@@ -11,7 +11,8 @@
 	<script src="scripts/main_processes.js"></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-
+	<script src="https://unpkg.com/konva@7.2.2/konva.min.js"></script>
+	<script src="scripts/ultraland.js"></script>
 </head>
 <body>
 	<header>
@@ -22,9 +23,7 @@
 		<div> 
 			<h1>Skupinový projekt</h1>
 		</div>
-		<div style="width: 92px; height: 60px;">
-			
-		</div>  
+		<div style="width: 92px; height: 60px;"></div>  
 	</header>
 	<nav>
 		<ul class="nav justify-content-center">
@@ -47,13 +46,11 @@
 		         		<ul class="submenu">
 		         			<li><a href="aboutgames.html">O puzzle hrach</a></li>
 					        <li><a href="">Documentacia ku hram</a></li>
-				         </ul>
+				        </ul>
 		         	</li>
-		          </ul>
+		         </ul>
 		  	</li>
 		  </nav>
-	
-
 		  	<li class="nav-item">
 		  	  	<a class="nav-link" href="autory.html">Autory</a>
 		  	</li>
@@ -62,14 +59,8 @@
 	<div>
 		<div class="row content margin-scroll" id="content">
 			<section class="col-lg-9 col-md-12 col-sm-12">
-				<div class="row cen-div" id="games">
-					<a href=""><img alt="hra1" src="img/300x300.png" class="href-img-game"><br>by Hanna Hryharouskaya</a>
-					<a href="ultraland.html"><img alt="hra1" src="img/ultraland/bg.png" class="href-img-game"><br>by Patrik Kupčulák</a>
-					<a href=""><img alt="hra1" src="img/300x300.png" class="href-img-game"><br>by Tetiana Kukhelna</a>
-					<a href=""><img alt="hra1" src="img/300x300.png" class="href-img-game"><br>by Vlad Chernov</a>
-				</div>
+				<div id="container"></div>
 			</section>
-
 			<aside id="aside" class="col-lg-3 col-md-12 col-sm-12">
 				<h3>Zisti meniny</h3>
 				<names-day></names-day>
