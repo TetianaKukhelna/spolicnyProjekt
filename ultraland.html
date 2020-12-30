@@ -12,7 +12,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 	<script src="https://unpkg.com/konva@7.2.2/konva.min.js"></script>
-	<script src="scripts/ultraland.js"></script>
+	
 </head>
 <body>
 	<header>
@@ -59,7 +59,10 @@
 	<div>
 		<div class="row content margin-scroll" id="content">
 			<section class="col-lg-9 col-md-12 col-sm-12">
-				<div id="container"></div>
+				<button id="start">Začať hru</button>
+				<button id="demo">Spusti demo</button>
+				<div id="timer"></div>
+				<div id="ultraland"></div>
 			</section>
 			<aside id="aside" class="col-lg-3 col-md-12 col-sm-12">
 				<h3>Zisti meniny</h3>
@@ -76,5 +79,6 @@
 	  		<br>
 	  	</div>
 	</footer>
+	<script src="scripts/ultraland.js"></script>
 </body>
 </html>

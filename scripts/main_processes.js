@@ -53,21 +53,23 @@ class Namesday extends HTMLElement {
 	     	success: function(xml){
 	     		var date = new Date();
 
-	     		// Code for set name + date for day
-				document.getElementById("nameday_date_and_name").innerHTML = date.getDate() + "." + (date.getMonth()+1) + "." + date.getFullYear();
-
-	            // Filter day out of the zaznam
-	            var myXML = $(xml).find("zaznam").filter(function() {
-	                return $(this).find('den').text() == getCorrectDate(1);;
-	            });
-
-	            // Store a string with name info in the display variable
-	            var display = myXML.children().map(function() {
-	            	if(this.tagName == "SK")
-	                	return $(this).text(); //return this.tagName + '=' + $(this).text();
-	            }).get().join(' ');
-
-	            document.getElementById("nameday_date_and_name").innerHTML += " " + display;
+	     		if(document.getElementById("nameday_date_and_name")){
+	     			// Code for set name + date for day
+					document.getElementById("nameday_date_and_name").innerHTML = date.getDate() + "." + (date.getMonth()+1) + "." + date.getFullYear();
+	     		
+	            	// Filter day out of the zaznam
+	            	var myXML = $(xml).find("zaznam").filter(function() {
+	            	    return $(this).find('den').text() == getCorrectDate(1);;
+	            	});
+	
+	            	// Store a string with name info in the display variable
+	            	var display = myXML.children().map(function() {
+	            		if(this.tagName == "SK")
+	            	    	return $(this).text(); //return this.tagName + '=' + $(this).text();
+	            	}).get().join(' ');
+	
+	            	document.getElementById("nameday_date_and_name").innerHTML += " " + display;
+	            }
 	        }
 	  	});
 
