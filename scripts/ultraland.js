@@ -45,13 +45,27 @@ $(document).ready(function(){
   }
 
   function getNewPosition(land, outline){ //TU UPRAVIT
-    if(land.x < outline.x){
-      land.x += 50;
+    if(land.attrs.x < outline.x){
+      land.attrs.x += 10;
     }else{
-      land.x -= 50;
+      land.attrs.x -= 10;
     }
 
+    if(land.attrs.y < outline.y){
+      land.attrs.y += 10;
+    }else{
+      land.attrs.y -= 10;
+    }
     return land;
+  }
+
+  function isNotPositionIn(land, outline){
+    if(land.attrs.x - 25 <= outline.x && outline.x <= land.attrs.x + 25 && land.attrs.y - 25 <= outline.y && outline.y <= land.attrs.y + 25){
+      land.attrs.x = outline.x;
+      land.attrs.y = outline.y;
+      return false;
+    }
+    return true;
   }
 
   function initStage(images, demo) {
@@ -148,7 +162,7 @@ $(document).ready(function(){
 
       // create land outlines
       for (var key in outlines) {
-        // anonymous function to induce scope
+        
         (function () {
           var imageObj = images[key];
           var out = outlines[key];
@@ -165,7 +179,7 @@ $(document).ready(function(){
 
       // create draggable lands
       for (var key in lands) {
-        // anonymous function to induce scope
+
         (function () {
           var privKey = key;
           var anim = lands[key];
@@ -231,11 +245,12 @@ $(document).ready(function(){
 
       stage.add(background);
       stage.add(landLayer);
+      drawBackground(background,images.background_map,'Vitaj! Polož všetky územia na island!');
     }
     else if(demo){
       // create land outlines
       for (var key in outlines) {
-        // anonymous function to induce scope
+
         (function () {
           var imageObj = images[key];
           var out = outlines[key];
@@ -252,7 +267,7 @@ $(document).ready(function(){
 
       // create lands
       for (var key in lands) {
-        // anonymous function to induce scope
+
         (function () {
           var privKey = key;
           var anim = lands[key];
@@ -262,9 +277,52 @@ $(document).ready(function(){
             y: anim.y,
             draggable: false,
           });
-          ///////////// TU UPRAV
-          console.log(land.attrs.x);
-          lands.landC = getNewPosition(lands.landA, outlines.landA_black);
+
+          if(key == "landA"){
+            while(isNotPositionIn(land, outlines.landA_black)){
+              land = getNewPosition(land, outlines.landA_black);
+            }
+          }
+          else if(key == "landB"){
+            while(isNotPositionIn(land, outlines.landB_black)){
+              land = getNewPosition(land, outlines.landB_black);
+            }
+          }
+          else if(key == "landC"){
+            while(isNotPositionIn(land, outlines.landC_black)){
+              land = getNewPosition(land, outlines.landC_black);
+            }
+          }
+          else if(key == "landD"){
+            while(isNotPositionIn(land, outlines.landD_black)){
+              land = getNewPosition(land, outlines.landD_black);
+            }
+          }
+          else if(key == "landE"){
+            while(isNotPositionIn(land, outlines.landE_black)){
+              land = getNewPosition(land, outlines.landE_black);
+            }
+          }
+          else if(key == "landF"){
+            while(isNotPositionIn(land, outlines.landF_black)){
+              land = getNewPosition(land, outlines.landF_black);
+            }
+          }
+          else if(key == "landG"){
+            while(isNotPositionIn(land, outlines.landG_black)){
+              land = getNewPosition(land, outlines.landG_black);
+            }
+          }
+          else if(key == "landH"){
+            while(isNotPositionIn(land, outlines.landH_black)){
+              land = getNewPosition(land, outlines.landH_black);
+            }
+          }
+          else if(key == "landI"){
+            while(isNotPositionIn(land, outlines.landI_black)){
+              land = getNewPosition(land, outlines.landI_black);
+            }
+          }
           /////////////
           landLayer.add(land);
           landShapes.push(land);
@@ -273,13 +331,10 @@ $(document).ready(function(){
 
       stage.add(background);
       stage.add(landLayer);
+      drawBackground(background,images.background_map,'Ukážkové demo.');
     }
 
-    drawBackground(
-      background,
-      images.background_map,
-      'Vitaj! Polož všetky územia na island!'
-    );
+    
   }
 
   var sources = {
@@ -345,6 +400,14 @@ $(document).ready(function(){
         refreshTimer();
       }
     }, 1000);
+  }
+
+  function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
   }
 
 

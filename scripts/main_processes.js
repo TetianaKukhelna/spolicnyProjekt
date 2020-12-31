@@ -13,11 +13,11 @@ template.innerHTML =
 		<div class="row" id="row">
 			<div class="cen-div">
 				<label id="font-style">Deň</label><br>
-				<input type="number" id="input_day" class="input-num-nameday" placeholder="1" min="1" max="31" required>
+				<input type="number" id="input_day" class="input-num-nameday" placeholder="1" min="1" max="31" value="1" required>
 			</div>
 			<div class="cen-div">
 				<label id="font-style">Mesiac</label><br>
-				<input type="number" id="input_month" class="input-num-nameday" placeholder="1" min="1" max="12" required>
+				<input type="number" id="input_month" class="input-num-nameday" placeholder="1" min="1" max="12" value="1" required>
 			</div>
 		</div>
 
@@ -334,13 +334,3 @@ class Namesday extends HTMLElement {
 }
 
 window.customElements.define('names-day', Namesday);
-
-/*
-	===TODO===
-	*/
-
-
-
-
-
-	
