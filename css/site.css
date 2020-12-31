@@ -1,7 +1,6 @@
 html{
  width: 100% !important;
  height: 100% !important;
- content-visibility: auto;
 }
 .test{
 	border: 2px solid powderblue;
@@ -144,6 +143,13 @@ footer{
 	}
   .object{
     height: 50em !important;
+  }
+  
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px){
+  .content{
+    min-height: 20em;
   }
   
 }
