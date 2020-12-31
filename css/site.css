@@ -1,7 +1,17 @@
+html{
+ width: 100% !important;
+ height: 100% !important;
+ content-visibility: auto;
+}
 .test{
 	border: 2px solid powderblue;
 	padding-top: 10px;
     padding-bottom: 20px;
+}
+
+h6{
+  font-size: 1em;
+    color: crimson;
 }
 
 #find_by_date, #find_by_name{
@@ -120,12 +130,22 @@ footer{
 	.content{
 		min-height: 45em;
 	}
+  footer{
+    display: contents;
+  }
+  .object{
+    height: 50em !important;
+  }
 }
 
 @media screen and (max-width: 768px){
 	.content{
 		min-height: 40em;
 	}
+  .object{
+    height: 50em !important;
+  }
+  
 }
 
 /*Inputs name-day*/
