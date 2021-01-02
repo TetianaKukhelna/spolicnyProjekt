@@ -42,11 +42,11 @@ var totalSeconds = 0;
 
 
 /*function stopTimer() {
-	var minutesLabel = document.getElementById("minutes").value;
-	var secondsLabel = document.getElementById("seconds").value;
-	var StartTimer = setInterval(setTime, 1000);
+    var minutesLabel = document.getElementById("minutes").value;
+    var secondsLabel = document.getElementById("seconds").value;
+    var StartTimer = setInterval(setTime, 1000);
 
-	function setTime()
+    function setTime()
         {
             totalSeconds+0;
             secondsLabel.innerHTML = pad(totalSeconds%60);
@@ -59,12 +59,12 @@ var totalSeconds = 0;
 
 $(function(){
     var allThings = 0;
-	var sec = 0;
-	var stop = false;
+    var sec = 0;
+    var stop = false;
     var minutesLabel = document.getElementById("minutes");
     var secondsLabel = document.getElementById("seconds");
 
-//Stop timer--------------------------------------------------------	
+//Stop timer--------------------------------------------------------    
     
     $( init );
 
@@ -72,7 +72,7 @@ $(function(){
         allThings = 0;
         $('#done').hide();
         
-		Draggable.create("#lamp1_element", {
+        Draggable.create("#lamp1_element", {
             onDragEnd: function(){
                 if(this.hitTest("#lamp1_placeholder")){
                     TweenLite.to(this.target, 0.1, {opacity:0});
@@ -81,8 +81,8 @@ $(function(){
                     console.log(allThings);
                 }
                 if(allThings === 9){
-					this.stop = true;
-					clearInterval(StartTimer);
+                    this.stop = true;
+                    clearInterval(StartTimer);
                     $('#done').show();
                     $('#done').animate({
                         left: '50%',
@@ -94,8 +94,8 @@ $(function(){
                 };
             }
         });
-		
-		Draggable.create("#lamp2_element", {
+        
+        Draggable.create("#lamp2_element", {
             onDragEnd: function(){
                 if(this.hitTest("#lamp2_placeholder")){
                     TweenLite.to(this.target, 0.1, {opacity:0});
@@ -104,8 +104,8 @@ $(function(){
                     console.log(allThings);
                 }
               if(allThings === 9){
-				  this.stop = true;
-				  clearInterval(StartTimer);
+                  this.stop = true;
+                  clearInterval(StartTimer);
                     $('#done').show();
                     $('#done').animate({
                         left: '50%',
@@ -117,7 +117,7 @@ $(function(){
                 };
             }
         });
-		
+        
        Draggable.create("#lamp3_element", {
             onDragEnd: function(){
                 if(this.hitTest("#lamp3_placeholder")){
@@ -127,8 +127,8 @@ $(function(){
                     console.log(allThings);
                 }
                if(allThings === 9){
-				   this.stop = true;
-				   clearInterval(StartTimer);
+                   this.stop = true;
+                   clearInterval(StartTimer);
                     $('#done').show();
                     $('#done').animate({
                         left: '50%',
@@ -140,7 +140,7 @@ $(function(){
                 };
             }
         });
-		Draggable.create("#lamp4_element", {
+        Draggable.create("#lamp4_element", {
             onDragEnd: function(){
                 if(this.hitTest("#lamp4_placeholder"))
                 {
@@ -151,8 +151,8 @@ $(function(){
                 }
                 if(allThings === 9)
                 {
-					this.stop = true;
-					clearInterval(StartTimer);
+                    this.stop = true;
+                    clearInterval(StartTimer);
                     $('#done').show();
                     $('#done').animate(
                     {
@@ -165,7 +165,7 @@ $(function(){
                 };
             }
         });
-		Draggable.create("#lamp5_element", {
+        Draggable.create("#lamp5_element", {
             onDragEnd: function(){
                 if(this.hitTest("#lamp5_placeholder")){
                     TweenLite.to(this.target, 0.1, {opacity:0});
@@ -174,8 +174,8 @@ $(function(){
                     console.log(allThings);
                 }
                  if(allThings === 9){
-                 	clearInterval(StartTimer);
-					 this.stop = true;
+                    clearInterval(StartTimer);
+                     this.stop = true;
                     $('#done').show();
                     $('#done').animate({
                         left: '50%',
@@ -196,8 +196,8 @@ $(function(){
                     console.log(allThings);
                 }
                if(allThings === 9){
-               	clearInterval(StartTimer);
-				   this.stop = true;
+                clearInterval(StartTimer);
+                   this.stop = true;
                     $('#done').show();
                     $('#done').animate({
                         left: '50%',
@@ -218,8 +218,8 @@ $(function(){
                     console.log(allThings);
                 }
                 if(allThings === 9){
-					this.stop = true;
-					clearInterval(StartTimer);
+                    this.stop = true;
+                    clearInterval(StartTimer);
                     $('#done').show();
                     $('#done').animate({
                         left: '50%',
@@ -231,8 +231,8 @@ $(function(){
                 };
             }
         });
-	 
-		 Draggable.create("#lamp8_element", {
+     
+         Draggable.create("#lamp8_element", {
             onDragEnd: function(){
                 if(this.hitTest("#lamp8_placeholder")){
                     TweenLite.to(this.target, 0.1, {opacity:0});
@@ -241,8 +241,8 @@ $(function(){
                     console.log(allThings);
                 }
                  if(allThings === 9){
-                 	clearInterval(StartTimer);
-					 this.stop = true;
+                    clearInterval(StartTimer);
+                     this.stop = true;
                     $('#done').show();
                     $('#done').animate({
                         left: '50%',
@@ -254,7 +254,7 @@ $(function(){
                 };
             }
         });
-		 Draggable.create("#lamp9_element", {
+         Draggable.create("#lamp9_element", {
             onDragEnd: function(){
                 if(this.hitTest("#lamp9_placeholder")){
                     TweenLite.to(this.target, 0.1, {opacity:0});
@@ -263,8 +263,8 @@ $(function(){
                     console.log(allThings);
                 }
                if(allThings === 9){
-               		clearInterval(StartTimer);
-				   this.stop = true;
+                    clearInterval(StartTimer);
+                   this.stop = true;
                     $('#done').show();
                     $('#done').animate({
                         left: '50%',

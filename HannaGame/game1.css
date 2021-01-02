@@ -61,6 +61,7 @@ h1 {
     fill: #9e866a;;
     stroke-width:0.25px;
     stroke:#48484a;
+    opacity:0 ;
 }
 
 #timer{
@@ -132,11 +133,94 @@ h2 {
 background-color: gray;
 }
 .game{
+      display: contents;
       height: -webkit-fill-available !important;
 }
 
-@media screen and (max-width: 768px){
-  .object{
-    height: 50em !important;
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .game{
+      display: contents !important;
+    }
+}
+
+
+.animation_9{
+  offset-path: path('M-260 30 L45 52');
+  offset-distance: 100%;
+  opacity: 0;
+  animation: lamp 2s linear ;
+}
+
+.animation_1{
+  offset-path: path('M -350 300 L45 52');
+  offset-distance: 100%;
+  opacity: 0;
+  animation: lamp 2s linear ;
+}
+
+.animation_2{
+  offset-path: path('M -350 52 H 45 52');
+  offset-distance: 100%;
+  opacity: 0;
+  animation: lamp 1.8s linear ;
+}
+
+.animation_3{
+  offset-path: path('M -80 52 H 5 52');
+  offset-distance: 100%;
+  opacity: 0;
+  animation: lamp 1s linear;
+}
+
+.animation_4{
+  offset-path: path('M -30 52 H 5 52');
+  offset-distance: 100%;
+  opacity: 0;
+  animation: lamp 1s linear ;
+}
+
+.animation_5{
+  offset-path: path('M -250 200 L45 52');
+  offset-distance: 100%;
+  opacity: 0;
+  animation: lamp 2s linear ;
+}
+
+.animation_6{
+  offset-path: path('M -450 0 L45 52');
+  offset-distance: 100%;
+  opacity: 0;
+  animation: lamp 2s linear ;
+}
+
+.animation_7{
+  offset-path: path('M -380 0 L45 52');
+  offset-distance: 100%;
+  opacity: 0;
+  animation: lamp 2s linear ;
+}
+
+.animation_8{
+  offset-path: path('M -120 30 L45 52');
+  offset-distance: 100%;
+  opacity: 0;
+  animation: lamp 1s linear ;
+}
+
+
+
+
+@keyframes lamp {
+  from {
+    offset-distance: 100%;
+    opacity: 1;
+  }
+  to {
+    offset-distance: 0%;
+    opacity: 1;
   }
 }
