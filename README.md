@@ -1,18 +1,26 @@
 # Spoločný projekt - *ak chceš, aby vypisovalo všetko správne, treba ho dať na web(napr. súkromný alebo na localhost)*
 
-## Samostatné zadania
-- https://konvajs.org/docs/sandbox/Animals_on_the_Beach_Game.html (skvelá ukážka + kód)
-
-## IMPORTANT
-1. Hlavne menu generovane z json file(nieco podobne ako zadania s galeriou)
-2. css "@media print" by mal obsahovat, len to - čo je podstatné pre tlač(čiže odstrániť menu, pätičku, atď..)
-3. Troj úrovňové menu, zisťovanie menín a počítadlo osobných prístupov budú realizované pomocou vami vytvoreného web komponentu -> komponent, pre každý zvlášť
-
 ## TO DO
+[Hanna]
+1. css "@media print" by mal obsahovat, len to - čo je podstatné pre tlač(čiže odstrániť menu, pätičku, atď..)
+
+[Tetiana]
 1. Menu: Trojurovnove menu -> component
-2. Current date: Zobrazenie dnesneho mena a datumu v bloke .typewriter
-3. Photo + text on pages Autory/Documentation (ku kazdej hre mala dokumentacia)
-4. Zobrazenie histórie prehliadania vo forme path-based breadcrumbs ???
+
+[Vlad]
+1. Zobrazenie histórie prehliadania vo forme path-based breadcrumbs ??? - vo webkomponente
+2. Počítadlo - koľko krát užívateľ prišiel na stránku - vo webkomponente
+
+[Patrik]
+1. Upraviť zobrazenie menín na rôznych stránkach
+2. Opraviť gramatiku
+
+[Všetci]
+1. Photo + text on pages Autory/Documentation (ku kazdej hre mala dokumentacia)
+
+[Pomôcky]
+# Samostatné zadania
+- https://konvajs.org/docs/sandbox/Animals_on_the_Beach_Game.html (skvelá ukážka + kód)
 
 # Color picker
 1. https://color.adobe.com/create/color-wheel
