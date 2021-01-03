@@ -16,7 +16,7 @@
 2. Opraviť gramatiku
 
 [Všetci]
-1. Photo + text on pages Autory/Documentation (ku kazdej hre mala dokumentacia)
+1. Photo + text on pages Autory/Documentation
 
 [Pomôcky]
 # Samostatné zadania
