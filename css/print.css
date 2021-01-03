@@ -1,0 +1,67 @@
+@media print {
+
+ *{
+   font-family: none;
+ }
+
+ #section{
+  display: block;
+ } 
+
+html{
+  width: 100% !important;
+  height: 100% !important;
+  font-family: none;
+}
+footer{
+  display: none; 
+}
+h1{
+  text-align: center;
+}
+
+aside > .text{
+  width: 100mm;
+}
+.submenu{
+    position: unset; 
+    visibility: unset; 
+    opacity: unset; 
+    transform: none;
+}
+.submenu .submenu{
+    position: relative; 
+  }
+
+.input-num-nameday, #input_month {
+    color: black;
+  }
+
+.submenu li {
+    border: white;
+  }
+
+
+  .href-img-game {
+        width: 100mm !important;
+        height: 80mm !important;
+  }
+
+  .history{
+    display: none;
+  }
+  h4{
+    display: block;
+    text-align: center;
+  }
+ .notlac{
+  display: none;
+ }
+ .game2{
+  border: 1px solid black;
+ }
+input{
+  background-color: grey;
+  border: 2px border black;
+}
+}

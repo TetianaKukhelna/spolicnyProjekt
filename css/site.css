@@ -13,6 +13,10 @@ h6{
     color: crimson;
 }
 
+h4{
+  display: none;
+}
+
 #find_by_date, #find_by_name{
   text-decoration: none;
   display: inline-block;
@@ -146,6 +150,14 @@ footer{
   }
 }
 
+@media screen and (max-width: 993px){
+  #section {
+    background-size: cover !important;
+  }
+}
+
+
+
 @media screen and (max-width: 768px){
 	.content{
 		min-height: 40em;
@@ -192,8 +204,8 @@ footer{
 
 .href-img-game{
 	padding: 1em;
-	width: 50vh;
-	height: 40vh;
+	width: 100mm;
+	height: 80mm;
 }
 
 /*Autors*/

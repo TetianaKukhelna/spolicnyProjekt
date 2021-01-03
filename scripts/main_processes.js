@@ -334,3 +334,11 @@ class Namesday extends HTMLElement {
 }
 
 window.customElements.define('names-day', Namesday);
+
+
+$(function($){
+	$(".action-print").click(function(){
+		window.print();
+		return false;
+	});
+});
