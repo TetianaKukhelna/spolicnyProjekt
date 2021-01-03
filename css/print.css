@@ -64,4 +64,7 @@ input{
   background-color: grey;
   border: 2px border black;
 }
+#aside{
+  text-align: -webkit-center;
+}
 }
