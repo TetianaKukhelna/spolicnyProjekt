@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="sk">
 <head>
 	<meta charset="UTF-8">
 	<link rel="icon" type="image/png" href="img/snowflake.png">
@@ -5,14 +7,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/site.css">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="scripts/main_processes.js"></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-	<script src="https://unpkg.com/konva@7.2.2/konva.min.js"></script>
-	
+	<script type="text/javascript" src="games/Hannagame/code.js"></script>
+
+
 </head>
 <body>
 	<header>
@@ -20,10 +24,12 @@
 		  <div class="cube1"></div>
 		  <div class="cube2"></div>
 		</div>
-		<div> 
+		<div>
 			<h1>Skupinový projekt</h1>
 		</div>
-		<div style="width: 92px; height: 60px;"></div>  
+		<div style="width: 92px; height: 60px;">
+
+		</div>
 	</header>
 	<nav>
 		<ul class="nav justify-content-center">
@@ -34,40 +40,41 @@
 		  	<li class="nav-item" id="topmenu">
 		  	  	<a class="nav-link" href="games.html">Hry  ⮟</a>
 		  	  	<ul class="submenu">
-		            <li><a href="">Hry</a>
-		            	<ul class="submenu" >
+		            <li><a href="games.html">Hry</a>
+		            	<ul class="submenu">
 				            <li><a href="gameHanna.html">Hanna Hryharouskaya</a></li>
 				            <li><a href="ultraland.html">Patrik Kupčulák</a></li>
 				            <li><a href="hraTetiana.html">Tetiana Kukhelna</a></li>
 				            <li><a href="">Vlad Chernov</a></li>
-				        </ul>
+				          </ul>
 		            </li>
 		         	<li><a href="instructions.html">Ine</a>
 		         		<ul class="submenu">
 		         			<li><a href="aboutgames.html">O puzzle hrach</a></li>
-					        <li><a href="">Documentacia ku hram</a></li>
-				        </ul>
+					        <li><a href="documentation.html">Documentacia ku hram</a></li>
+				         </ul>
 		         	</li>
-		         </ul>
+		          </ul>
 		  	</li>
 		  </nav>
+
+
 		  	<li class="nav-item">
 		  	  	<a class="nav-link" href="autory.html">Autory</a>
 		  	</li>
 		</ul>
 	</nav>
+
 	<div>
 		<div class="row content margin-scroll" id="content">
-			<section class="col-lg-9 col-md-12 col-sm-12">
-				<h6> Ak hrá príliš veľká prosím zmenšíte veľkosť v prehadaci </h6>
-				<button id="start">Začať hru</button>
-				<button id="demo">Spusti demo</button>
-				<div id="timer"></div>
-				<div id="ultraland"></div>
+			<section class="col-lg-9 col-md-12 col-sm-12" >
+				<h6>  Hra sa zacne ked stlacite Zacat! </h6>
+				<object class="object" data="puzzleTetiana/index.html" style=" width: 100%; height: 100% " ></object>
 			</section>
 			<aside id="aside" class="col-lg-3 col-md-12 col-sm-12">
 				<h3>Zisti meniny</h3>
 				<names-day></names-day>
+				<div id="nameday_date_and_name"></div>
 				<div id="nameday_find"></div>
 				<br>
 				<div class="history">História</div>
@@ -80,6 +87,6 @@
 	  		<br>
 	  	</div>
 	</footer>
-	<script src="scripts/ultraland.js"></script>
+
 </body>
 </html>
