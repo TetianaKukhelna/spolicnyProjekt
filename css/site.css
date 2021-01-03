@@ -118,6 +118,15 @@ footer{
 	margin: 15px;
 }
 
+.table-1  td{
+  border: 2px solid #eaa1ec;
+  padding: 15px;
+  font-size: 1em;
+}
+
+.pictures img{
+  border: 1px solid #eaa1ec;
+}
 
 /*Resize page by width*/
 
