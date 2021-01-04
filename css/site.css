@@ -82,7 +82,7 @@ header{
     place-content: center;
 }
 
-h1{
+.h1{
 	text-align: center;
 	font-family: 'VT323', monospace;
 	text-transform: uppercase;
@@ -420,7 +420,7 @@ transform: translateY(0px);
 
 }
 
-.typewriter h1 {
+.typewriter h1{
     font-size: 24px;
     color: #e8ff28;
   font-family:  'VT323', monospace;
