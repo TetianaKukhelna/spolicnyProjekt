@@ -1,7 +1,7 @@
 /*Web component*/
 
 const templateMenu = document.createElement('template');
-template.innerHTML =
+templateMenu.innerHTML =
     `
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/site.css">
@@ -68,57 +68,57 @@ class TrojMenu extends HTMLElement {
     connectedCallback() {
 
         let thisOne = this;
-        thisOne.shadowRoot.getElementById('dom').innertext = poleNazov[0];
-        thisOne.shadowRoot.getElementById('hryPrve').innertext = poleNazov[1];
-        thisOne.shadowRoot.getElementById('hryPodPrve').innertext = poleNazov[2];
-        thisOne.shadowRoot.getElementById('hraHanna').innertext = poleNazov[3];
-        thisOne.shadowRoot.getElementById('hraTeti').innertext = poleNazov[4];
-        thisOne.shadowRoot.getElementById('hraPatrik').innertext = poleNazov[5];
-        thisOne.shadowRoot.getElementById('hraVlad').innertext = poleNazov[6];
-        thisOne.shadowRoot.getElementById('ineInfo').innertext = poleNazov[7];
-        thisOne.shadowRoot.getElementById('about').innertext = poleNazov[8];
-        thisOne.shadowRoot.getElementById('document').innertext = poleNazov[9];
-        thisOne.shadowRoot.getElementById('autor').innertext = poleNazov[10];
+        thisOne.shadowRoot.querySelector('#dom').innerHTML = poleNazov[0];
+        thisOne.shadowRoot.querySelector('#hryPrve').innerHTML = poleNazov[1];
+        thisOne.shadowRoot.querySelector('#hryPodPrve').innerHTML = poleNazov[2];
+        thisOne.shadowRoot.querySelector('#hraHanna').innerHTML = poleNazov[3];
+        thisOne.shadowRoot.querySelector('#hraTeti').innerHTML = poleNazov[4];
+        thisOne.shadowRoot.querySelector('#hraPatrik').innerHTML = poleNazov[5];
+        thisOne.shadowRoot.querySelector('#hraVlad').innerHTML = poleNazov[6];
+        thisOne.shadowRoot.querySelector('#ineInfo').innerHTML = poleNazov[7];
+        thisOne.shadowRoot.querySelector('#about').innerHTML = poleNazov[8];
+        thisOne.shadowRoot.querySelector('#document').innerHTML = poleNazov[9];
+        thisOne.shadowRoot.querySelector('#autor').innerHTML = poleNazov[10];
 
-        thisOne.shadowRoot.getElementById('dom').style.display = "block";
-        thisOne.shadowRoot.getElementById('hryPrve').style.display = "block";
-        thisOne.shadowRoot.getElementById('autor').style.display = "block";
+        thisOne.shadowRoot.querySelector('#dom').style.display = "block";
+        thisOne.shadowRoot.querySelector('#hryPrve').style.display = "block";
+        thisOne.shadowRoot.querySelector('#autor').style.display = "block";
 
-        thisOne.shadowRoot.getElementById('dom').addEventListener('click', () => {
+        thisOne.shadowRoot.querySelector('#dom').addEventListener('click', () => {
             thisOne.shadowRoot.setAttribute(href, "index.html");
         })
 
-        thisOne.shadowRoot.getElementById('hryPrve').addEventListener('click', () => {
+        thisOne.shadowRoot.querySelector('#hryPrve').addEventListener('click', () => {
             thisOne.shadowRoot.setAttribute(href, "games.html");
         })
 
-        thisOne.shadowRoot.getElementById('autor').addEventListener('click', () => {
+        thisOne.shadowRoot.querySelector('#autor').addEventListener('click', () => {
             thisOne.shadowRoot.setAttribute(href, "autory.html");
         })
 
-        thisOne.shadowRoot.getElementById('hryPodPrve').style.display = "none";
-        thisOne.shadowRoot.getElementById('ineInfo').style.display = "none";
-        thisOne.shadowRoot.getElementById('hryPrve').addEventListener('onmouseout', () => {
-            thisOne.shadowRoot.getElementById('hryPodPrve').style.display = "block";
-            thisOne.shadowRoot.getElementById('ineInfo').style.display = "block";
+        thisOne.shadowRoot.querySelector('#hryPodPrve').style.display = "none";
+        thisOne.shadowRoot.querySelector('#ineInfo').style.display = "none";
+        thisOne.shadowRoot.querySelector('#hryPrve').addEventListener('onmouseout', () => {
+            thisOne.shadowRoot.querySelector('#hryPodPrve').style.display = "block";
+            thisOne.shadowRoot.querySelector('#ineInfo').style.display = "block";
         })
 
-        thisOne.shadowRoot.getElementById('hraHanna').style.display = "none";
-        thisOne.shadowRoot.getElementById('hraTeti').style.display = "none";
-        thisOne.shadowRoot.getElementById('hraPatrik').style.display = "none";
-        thisOne.shadowRoot.getElementById('hraVlad').style.display = "none";
-        thisOne.shadowRoot.getElementById('hryPodPrve').addEventListener('onmouseout', () => {
-            thisOne.shadowRoot.getElementById('hraHanna').style.display = "block";
-            thisOne.shadowRoot.getElementById('hraTeti').style.display = "block";
-            thisOne.shadowRoot.getElementById('hraPatrik').style.display = "block";
-            thisOne.shadowRoot.getElementById('hraVlad').style.display = "block";
+        thisOne.shadowRoot.querySelector('#hraHanna').style.display = "none";
+        thisOne.shadowRoot.querySelector('#hraTeti').style.display = "none";
+        thisOne.shadowRoot.querySelector('#hraPatrik').style.display = "none";
+        thisOne.shadowRoot.querySelector('#hraVlad').style.display = "none";
+        thisOne.shadowRoot.querySelector('#hryPodPrve').addEventListener('onmouseout', () => {
+            thisOne.shadowRoot.querySelector('#hraHanna').style.display = "block";
+            thisOne.shadowRoot.querySelector('#hraTeti').style.display = "block";
+            thisOne.shadowRoot.querySelector('#hraPatrik').style.display = "block";
+            thisOne.shadowRoot.querySelector('#hraVlad').style.display = "block";
         })
 
-        thisOne.shadowRoot.getElementById('about').style.display = "none";
-        thisOne.shadowRoot.getElementById('document').style.display = "none";
-        thisOne.shadowRoot.getElementById('ineInfo').addEventListener('onmouseout', () => {
-            thisOne.shadowRoot.getElementById('about').style.display = "block";
-            thisOne.shadowRoot.getElementById('document').style.display = "block";
+        thisOne.shadowRoot.querySelector('#about').style.display = "none";
+        thisOne.shadowRoot.querySelector('#document').style.display = "none";
+        thisOne.shadowRoot.querySelector('#ineInfo').addEventListener('onmouseout', () => {
+            thisOne.shadowRoot.querySelector('#about').style.display = "block";
+            thisOne.shadowRoot.querySelector('#document').style.display = "block";
         })
 
 
