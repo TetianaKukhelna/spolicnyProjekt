@@ -1,3 +1,18 @@
+<!--
+	
+Web componenty:
+
+	- Generovanie menu v troch urovniach pre kazdu stranku
+			- JS: trojurovne_menu.js 
+
+	- Web component: Zobrazenie aktuálneho dátumu s meninami v daný deň.
+			- JS: main_processes.js
+
+	- Zobrazenie počítadla osobných prístupov na stránku
+			- JS: cntVisizor.js
+			
+-->
+
 <!DOCTYPE html>
 <html lang="sk">
 <head>
@@ -18,6 +33,7 @@
 	<link rel="stylesheet" type="text/css" href="css/print.css">
 	<script src="scripts/trojurovne_menu.js"></script>
 
+
 </head>
 <body>
 	<header>
@@ -32,6 +48,8 @@
 			
 		</div>  
 	</header>
+
+
 	<troj-menu></troj-menu>
 	
 	<div>
@@ -43,6 +61,7 @@
 				</div>
 			</section>
 			<aside id="aside" class="col-lg-3 col-md-12 col-sm-12">
+
 				<h3>Zisti meniny</h3>
 				<names-day></names-day>
 				<div id="nameday_find"></div>
