@@ -138,12 +138,7 @@ class TrojMenu extends HTMLElement {
             if (this == dom) {
                 $('a[id="dom"]').click(function () {
                     thisOne.shadowRoot.setAttribute(href, "index.html")
-                    //location.href = "index.html";
                 });
-                // dom.onmouseover = function () {
-                //     dom.removeAttribute('style', 'background: #b463d4;\n' +
-                //         'border-color: #b463d4 !important;');
-                // }
             } else if (this == hryMenu) {
                 $('a[id="hryPrve"]').click(function () {
                     thisOne.shadowRoot.setAttribute(href,"games.html");
