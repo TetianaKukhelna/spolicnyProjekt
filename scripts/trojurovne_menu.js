@@ -87,6 +87,15 @@ class TrojMenu extends HTMLElement {
         thisOne.shadowRoot.getElementById('dom').addEventListener('click', () => {
             thisOne.shadowRoot.setAttribute(href, "index.html");
         })
+
+        thisOne.shadowRoot.getElementById('hryPrve').addEventListener('click', () => {
+            thisOne.shadowRoot.setAttribute(href, "games.html");
+        })
+
+        thisOne.shadowRoot.getElementById('autor').addEventListener('click', () => {
+            thisOne.shadowRoot.setAttribute(href, "autory.html");
+        })
+
         thisOne.shadowRoot.getElementById('hryPodPrve').style.display = "none";
         thisOne.shadowRoot.getElementById('ineInfo').style.display = "none";
         thisOne.shadowRoot.getElementById('hryPrve').addEventListener('onmouseout', () => {
