@@ -1,124 +1,144 @@
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-	<meta charset="UTF-8">
-	<link rel="icon" type="image/png" href="img/snowflake.png">
-	<title>Projekt</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/site.css">
-	<link rel="stylesheet" href="css/breadcrumbs.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<script src="scripts/main_processes.js"></script>
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-	<script src="scripts/trojurovne_menu.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/print.css">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="img/snowflake.png">
+    <title>Projekt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/breadcrumbs.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script src="scripts/main_processes.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <script src="scripts/trojurovne_menu.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/print.css">
 
 </head>
 <body>
-	<header>
-		<div class="spinner">
-		  <div class="cube1"></div>
-		  <div class="cube2"></div>
-		</div>
-		<div>
-			<h1>Skupinový projekt</h1>
-		</div>
-		<div style="width: 92px; height: 60px;">
+<header>
+    <div class="spinner">
+        <div class="cube1"></div>
+        <div class="cube2"></div>
+    </div>
+    <div>
+        <h1>Skupinový projekt</h1>
+    </div>
+    <div style="width: 92px; height: 60px;">
 
-		</div>
-	</header>
-	<troj-menu></troj-menu>
+    </div>
+</header>
+<troj-menu></troj-menu>
 
-	<ul class="breadcrumbs">
-		<li class="breadcrumbsItem">
-			<a href="index.html" class="breadcrumbsLink">Domov</a>
-		</li>
-		<li class="breadcrumbsItem">
-			<a href="games.html" class="breadcrumbsLink">Hry</a>
-		</li>
-		<li class="breadcrumbsItem">
-			<a href="ine.html" class="breadcrumbsLink">Iné</a>
-		</li>
-		<li class="breadcrumbsItem">
-			<a href="documentation.html" class="breadcrumbsLink breadcrumbsLinkActive">Documentácia ku hrám</a>
-		</li>
-	</ul>
+<ul class="breadcrumbs">
+    <li class="breadcrumbsItem">
+        <a href="index.html" class="breadcrumbsLink">Domov</a>
+    </li>
+    <li class="breadcrumbsItem">
+        <a href="games.html" class="breadcrumbsLink">Hry</a>
+    </li>
+    <li class="breadcrumbsItem">
+        <a href="ine.html" class="breadcrumbsLink">Iné</a>
+    </li>
+    <li class="breadcrumbsItem">
+        <a href="documentation.html" class="breadcrumbsLink breadcrumbsLinkActive">Documentácia ku hrám</a>
+    </li>
+</ul>
 
-	<div>
-		<div class="row content margin-scroll" id="content">
-			<section class="col-lg-9 col-md-12 col-sm-12">
-				<div class="text-in-div container">
-					<table class="table-1">
-						    <tr>
-						        <td>Meno</td>
-						        <td>Úloha</td>
-						        <td>Čo bolo spravené</td>
-						        <td>Kontakt</td>
-						    </tr>
-						    <tr>
-						        <td><span style="font-family: vt323, monospace; text-align: center;">Patrik Kupčulák</span></td>
-						        <td>web komponent zobrazenia menin</td>
-						        <td>zobrazenie aktuálneho dátumu s meninami v daný deň. súčasťou je obojsmerné zisťovanie priradenia dátumu a mena (pomocou xml).pri vyhľadávaní mena dokáže rozpoznať aj časť mena (sub-string)</td>
-						        <td>xkupculak@stuba.sk</td>
-						    </tr>
-						    <tr>
-						        <td><span style="font-family: vt323, monospace; text-align: center;">Hanna Hryharouskaya</span></td>
-						        <td>dizajn</td>
-						        <td>návrh grafického dizajnu pomocou css len v externom súbore. Responzívny dizajn + prispôsobenie stránky pre tlač pomocou css + validacia HTML a CSS</td>
-						        <td>xhryharouskaya@stuba.sk</td>
-						    </tr>
-						    <tr>
-						        <td><span style="font-family: vt323, monospace; text-align: center;">Tetiana Kukhelna</span></td>
-						        <td>web komponent trojurovneho menu</td>
-						        <td>Vytvorila samostatny subor v akom vytvorila web komponent na generovanie menu v troch urovniach pre kazdu stranku. Pridala jeho na kazdy stranku.</td>
-						        <td>xkukhelna@stuba.sk</td>
-						    </tr>
-						    <tr>
-						        <td><span style="font-family: vt323, monospace; text-align: center;">Vlad Chernov</span></td>
-						        <td>breadcrumbs a počítadlo osobných prístupov</td>
-						        <td>zobrazenie počítadla osobných prístupov na stránku. zobrazenie histórie prehliadania na každej stránke okrem "Domov" vo forme path-based breadcrumbs.</td>
-						        <td>xchernov@stuba.sk</td>
-						    </tr>
-					</table>
-					<br><br>
-					<p>🌺 Project na GITHUB -><a href="https://github.com/TetianaKukhelna/spolicnyProjekt"> WebTechProjectGit</a> 🌺</p>
-					<br>
-					<br>
-					<h5>Wireframes</h5>
-					<p> Spolu sme robili vo <a href="https://www.figma.com/">figme</a> wireframe stránky, aby sme rýchlejšie pochopili kostru, dizajn a kde budú naše web komponenty</p>
-					<p>Najviac wireframov a naše inspiration collage na dizajn -> <a href="https://www.figma.com/file/MFEELiRwU47JSGAmGwAcNS/WebTechProject?node-id=0%3A1">WebTechProjectFigma</a> </p>
-					<br>
-					<div class="pictures" >
-						<img src="img/1.png" alt="Wireframe1" style="width: 50%">
-						<img src="img/2.png" alt="Wireframe1" style="width: 40%" >
-						<br>
-						<img src="img/3.png" alt="Wireframe1" style="width: 20%">
-						<img src="img/4.png" alt="Wireframe1" style="width: 50%">
-					</div>
+<div>
+    <div class="row content margin-scroll" id="content">
+        <section class="col-lg-9 col-md-12 col-sm-12">
+            <div class="text-in-div container">
+                <table class="table-1">
+                    <tr>
+                        <td>Meno</td>
+                        <td>Úloha</td>
+                        <td>Čo bolo spravené</td>
+                        <td>Kontakt</td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-family: vt323, monospace; text-align: center;">Patrik Kupčulák</span></td>
+                        <td>web komponent zobrazenia menin</td>
+                        <td>zobrazenie aktuálneho dátumu s meninami v daný deň. súčasťou je obojsmerné zisťovanie
+                            priradenia dátumu a mena (pomocou xml).pri vyhľadávaní mena dokáže rozpoznať aj časť mena
+                            (sub-string)
+                        </td>
+                        <td>xkupculak@stuba.sk</td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-family: vt323, monospace; text-align: center;">Hanna Hryharouskaya</span>
+                        </td>
+                        <td>dizajn</td>
+                        <td>návrh grafického dizajnu pomocou css len v externom súbore. Responzívny dizajn +
+                            prispôsobenie stránky pre tlač pomocou css + validacia HTML a CSS
+                        </td>
+                        <td>xhryharouskaya@stuba.sk</td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-family: vt323, monospace; text-align: center;">Tetiana Kukhelna</span>
+                        </td>
+                        <td>web komponent trojurovneho menu</td>
+                        <td>Vytvorila samostatny subor v akom vytvorila web komponent na generovanie menu v troch
+                            urovniach pre kazdu stranku. Pridala jeho na kazdy stranku.
+                        </td>
+                        <td>xkukhelna@stuba.sk</td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-family: vt323, monospace; text-align: center;">Vlad Chernov</span></td>
+                        <td>breadcrumbs a počítadlo osobných prístupov</td>
+                        <td>zobrazenie počítadla osobných prístupov na stránku. zobrazenie histórie prehliadania na
+                            každej stránke okrem "Domov" vo forme path-based breadcrumbs.
+                        </td>
+                        <td>xchernov@stuba.sk</td>
+                    </tr>
+                </table>
+                <br><br>
+                <p>🌺 Project na GITHUB -><a href="https://github.com/TetianaKukhelna/spolicnyProjekt">
+                    WebTechProjectGit</a> 🌺</p>
+                <br>
+                <br>
+                <h5>Wireframes</h5>
+                <p> Spolu sme robili vo <a href="https://www.figma.com/">figme</a> wireframe stránky, aby sme rýchlejšie
+                    pochopili kostru, dizajn a kde budú naše web komponenty</p>
+                <p>Najviac wireframov a naše inspiration collage na dizajn -> <a
+                        href="https://www.figma.com/file/MFEELiRwU47JSGAmGwAcNS/WebTechProject?node-id=0%3A1">WebTechProjectFigma</a>
+                </p>
+                <br>
+                <div class="pictures">
+                    <img src="img/1.png" alt="Wireframe1" style="width: 50%">
+                    <img src="img/2.png" alt="Wireframe1" style="width: 40%">
+                    <br>
+                    <img src="img/3.png" alt="Wireframe1" style="width: 20%">
+                    <img src="img/4.png" alt="Wireframe1" style="width: 50%">
+                </div>
 
-				</div>
-			</section>
-			<aside id="aside" class="col-lg-3 col-md-12 col-sm-12  notlac">
-				<h3>Zisti meniny</h3>
-				<names-day></names-day>
-				<div id="nameday_date_and_name"></div>
-				<div id="nameday_find"></div>
-				<br>
-			</aside>
-		</div>
-	</div>
-	<footer class="footer">
-	  	<div class="container">
-	  		<a href="#" class="action-print">Vytlačiť stranku</a>
-	  		<hr>
-	  		<br>
-	  		<span>Copr. Hanna Hryharouskaya, Patrik Kupčulák, Tetiana Kukhelna, Vlad Chernov </span>
-	  		<br>
-	  	</div>
-	</footer>
+            </div>
+        </section>
+        <aside id="aside" class="col-lg-3 col-md-12 col-sm-12  notlac">
+            <h3>Zisti meniny</h3>
+            <names-day></names-day>
+            <div id="nameday_date_and_name"></div>
+            <div id="nameday_find"></div>
+            <br>
+        </aside>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <a href="#" class="action-print">Vytlačiť stranku</a>
+        <hr>
+        <br>
+        <span>Copr. Hanna Hryharouskaya, Patrik Kupčulák, Tetiana Kukhelna, Vlad Chernov </span>
+        <br>
+    </div>
+</footer>
 </body>
 </html>
