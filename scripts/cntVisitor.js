@@ -5,16 +5,10 @@ window.onload = () => {
         cnt = parseInt(visitors, 10) + 1;
     }
     setCookie("visitors", cnt, 1);
-    //console.log(document.cookie);
 
     var el = document.querySelector(".counter");
     el.innerHTML = "Počet osobných prístupov<br>na stránku - " + cnt;
 }
-
-// window.addEventListener("unload", () => {
-//     setCookie("unload", "close", 1);
-// });
-
 
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
@@ -37,16 +31,4 @@ function getCookie(cname) {
         }
     }
     return "";
-}
-
-function checkCookie() {
-    var user = getCookie("username");
-    if (user != "") {
-        alert("Welcome again " + user);
-    } else {
-        user = prompt("Please enter your name:", "");
-        if (user != "" && user != null) {
-            setCookie("username", user, 30);
-        }
-    }
 }

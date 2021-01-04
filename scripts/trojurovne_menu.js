@@ -76,7 +76,7 @@ let Ine = document.querySelector("#ineInfo");
 let podIne = document.querySelector("#about");
 let Document = document.querySelector("#document");
 let autory = document.querySelector("#autor");
-let poleNazov = ["Domov", "Hry  ⮟", "Hry", "Hanna Hryharouskaya", "Patrik Kupčulák", "Tetiana Kukhelna", "Vlad Chernov", "Ine", "O puzzle hrach", "Documentacia k projektu", "Autory"];
+let poleNazov = ["Domov", "Hry  ⮟", "Hry", "Hanna Hryharouskaya", "Patrik Kupčulák", "Tetiana Kukhelna", "Vlad Chernov", "Ine", "O puzzle hrach", "Documentacia k projektu", "Autori"];
 
 
 class TrojMenu extends HTMLElement {
@@ -138,12 +138,7 @@ class TrojMenu extends HTMLElement {
             if (this == dom) {
                 $('a[id="dom"]').click(function () {
                     thisOne.shadowRoot.setAttribute(href, "index.html")
-                    //location.href = "index.html";
                 });
-                // dom.onmouseover = function () {
-                //     dom.removeAttribute('style', 'background: #b463d4;\n' +
-                //         'border-color: #b463d4 !important;');
-                // }
             } else if (this == hryMenu) {
                 $('a[id="hryPrve"]').click(function () {
                     thisOne.shadowRoot.setAttribute(href,"games.html");
