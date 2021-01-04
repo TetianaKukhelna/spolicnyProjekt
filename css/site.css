@@ -55,6 +55,16 @@ h4{
 
 }
 
+#img1, #img4{
+  width: 50% !important; 
+}
+#img2{
+    width: 40% !important; 
+}
+#img3{
+  width: 25% !important;
+}
+
 
 body{
 	padding-top: 20px !important;
@@ -82,7 +92,7 @@ header{
     place-content: center;
 }
 
-.h1{
+h1{
 	text-align: center;
 	font-family: 'VT323', monospace;
 	text-transform: uppercase;
@@ -444,6 +454,6 @@ transform: translateY(0px);
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange }
-
+}
   /*--[--------------------------*/
 
