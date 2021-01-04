@@ -23,24 +23,6 @@ h1{
 aside > .text{
   width: 100mm;
 }
-.submenu{
-    position: unset; 
-    visibility: unset; 
-    opacity: unset; 
-    transform: none;
-}
-.submenu .submenu{
-    position: relative; 
-  }
-
-.input-num-nameday, #input_month {
-    color: black;
-  }
-
-.submenu li {
-    border: white;
-  }
-
 
   .href-img-game {
         width: 100mm !important;
