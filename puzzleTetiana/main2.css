@@ -16,7 +16,7 @@ section.drag-and_drop-game {
     pointer-events: none !important;
 }
 
-section.drag-and_drop-game .block_abs{
+section.drag-and_drop-game .block_abs {
     position: absolute;
 }
 
@@ -37,7 +37,7 @@ section.drag-and_drop-game .block::after {
     border-radius: inherit;
 }
 
-section.drag-and_drop-game .target-blocks{
+section.drag-and_drop-game .target-blocks {
     position: relative;
     width: 400px;
     height: 500px;
@@ -49,52 +49,52 @@ section.drag-and_drop-game .block.target {
     z-index: -1;
 }
 
-section.drag-and_drop-game .target-blocks #one{
+section.drag-and_drop-game .target-blocks #one {
     top: 0;
     left: 146px;
 }
 
-section.drag-and_drop-game .target-blocks #two{
+section.drag-and_drop-game .target-blocks #two {
     top: 209.2px;
     left: 190px;
 }
 
-section.drag-and_drop-game .target-blocks #three{
+section.drag-and_drop-game .target-blocks #three {
     top: 251px;
     left: 173px;
 }
 
- section.drag-and_drop-game .target-blocks #four{
+section.drag-and_drop-game .target-blocks #four {
     top: 351px;
     left: 217px;
 }
 
-section.drag-and_drop-game .target-blocks #five{
+section.drag-and_drop-game .target-blocks #five {
     top: 240px;
     left: 70px;
 }
 
-section.drag-and_drop-game .target-blocks #six{
+section.drag-and_drop-game .target-blocks #six {
     top: 405px;
     left: 114.49px;
 }
 
-section.drag-and_drop-game .target-blocks #seven{
+section.drag-and_drop-game .target-blocks #seven {
     top: 422px;
     left: 277px;
 }
 
-section.drag-and_drop-game .target-blocks #eight{
+section.drag-and_drop-game .target-blocks #eight {
     top: 430px;
     left: 190px;
 }
 
-section.drag-and_drop-game .target-blocks #nine{
+section.drag-and_drop-game .target-blocks #nine {
     top: 430px;
     left: 240px;
 }
 
-section.drag-and_drop-game .target-blocks #ten{
+section.drag-and_drop-game .target-blocks #ten {
     top: 120px;
     left: 100px;
 }
@@ -156,10 +156,9 @@ section.drag-and_drop-game .statistics .score {
 }
 
 section.drag-and_drop-game #final-score-dialog {
-    top: 50%;
+    position: fixed;
     left: 50%;
-    bottom: auto;
-    right: auto;
+    top: 50%;
     transform: translate(-50%, -50%);
     background: white;
     box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.8);
@@ -176,7 +175,9 @@ section.drag-and_drop-game #final-score-dialog .dialog-body {
     text-align: center;
 }
 
-section.drag-and_drop-game @keyframes shadow-burst {
+section.drag-and_drop-game
+
+@keyframes shadow-burst {
     to {
         box-shadow: 0 0 25px 50px rgba(255, 255, 255, 0.6);
         opacity: 0;
@@ -185,31 +186,36 @@ section.drag-and_drop-game @keyframes shadow-burst {
 
 section.drag-and_drop-game .cantered-horizontal {
     display: flex;
-    justify-content: space-between!important;
+    justify-content: space-between !important;
 
 }
 
 section.drag-and_drop-game .mb-10 {
     margin: 0 10px;
 }
+
 @media (min-width: 1200px) {
     .time-left {
         font-size: 50px;
     }
-    .btn{
-        font-size: 30px!important;
+
+    .btn {
+        font-size: 30px !important;
     }
 }
+
 @media (max-width: 1200px) {
     .target-blocks {
         grid-template-columns: repeat(auto-fill, 300px);
         grid-auto-rows: 300px;
     }
-    .time-left{
+
+    .time-left {
         font-size: 60px;
     }
-    .btn{
-        font-size: 30px!important;
+
+    .btn {
+        font-size: 30px !important;
     }
 }
 
@@ -218,11 +224,13 @@ section.drag-and_drop-game .mb-10 {
         grid-template-columns: repeat(auto-fill, 300px);
         grid-auto-rows: 300px;
     }
-    .time-left{
+
+    .time-left {
         font-size: 60px;
     }
-    .btn{
-        font-size: 30px!important;
+
+    .btn {
+        font-size: 30px !important;
     }
 }
 
@@ -231,11 +239,13 @@ section.drag-and_drop-game .mb-10 {
         grid-template-columns: repeat(auto-fill, 300px);
         grid-auto-rows: 300px;
     }
-    .time-left{
+
+    .time-left {
         font-size: 60px;
     }
-    .btn{
-        font-size: 30px!important;
+
+    .btn {
+        font-size: 30px !important;
     }
 }
 
@@ -244,11 +254,13 @@ section.drag-and_drop-game .mb-10 {
         grid-template-columns: repeat(auto-fill, 300px);
         grid-auto-rows: 300px;
     }
-    .time-left{
+
+    .time-left {
         font-size: 60px;
     }
-    .btn{
-        font-size: 30px!important;
+
+    .btn {
+        font-size: 30px !important;
     }
 }
 
@@ -257,10 +269,12 @@ section.drag-and_drop-game .mb-10 {
         grid-template-columns: repeat(auto-fill, 300px);
         grid-auto-rows: 300px;
     }
-    .time-left{
+
+    .time-left {
         font-size: 60px;
     }
-    .btn{
-        font-size: 30px!important;
+
+    .btn {
+        font-size: 30px !important;
     }
 }

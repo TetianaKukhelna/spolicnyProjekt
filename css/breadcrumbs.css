@@ -1,0 +1,30 @@
+.breadcrumbs {
+    padding: 10px;
+    padding-left: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 95%;
+}
+
+.breadcrumbsItem{
+    display: inline-block;
+}
+
+.breadcrumbsItem:not(:last-of-type)::after{
+    content: '\203a';
+    margin: 0 5px;
+    color:  #cccccc;
+}
+
+.breadcrumbsLink{
+    text-decoration: none;
+    color: black;
+}
+
+.breadcrumbsLink:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+.breadcrumbsLinkActive{
+    color: #999999;
+}
