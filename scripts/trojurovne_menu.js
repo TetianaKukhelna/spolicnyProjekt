@@ -21,16 +21,16 @@ templateMenu.innerHTML =
                         <li>
                             <a id="hryPodPrve" href="games.html"></a>
                             <ul class="submenu">
-                                <li id="hraHanna"><a href="gameHanna.html"></a></li>
-                                <li id="hraPatrik"><a href="ultraland.html"></a></li>
-                                <li id="hraTeti"><a href="hraTetiana.html"></a></li>
-                                <li id="hraVlad"><a href=""></a></li>
+                                <li><a id="hraHanna" href="gameHanna.html"></a></li>
+                                <li><a id="hraPatrik" href="ultraland.html"></a></li>
+                                <li><a id="hraTeti" href="hraTetiana.html"></a></li>
+                                <li><a id="hraVlad" href=""></a></li>
                             </ul>
                         </li>
                         <li><a id="ineInfo" href="ine.html"></a>
                         <ul class="submenu">
-                            <li id="about"><a href="aboutgames.html"></a></li>
-                            <li id="document"><a href="documentation.html"></a></li>
+                            <li><a id="about" href="aboutgames.html"></a></li>
+                            <li><a id="document" href="documentation.html"></a></li>
                         </ul>
                         </li>
                    </ul>
@@ -96,36 +96,25 @@ class TrojMenu extends HTMLElement {
             thisOne.shadowRoot.setAttribute(href, "autory.html");
         })
 
-        thisOne.shadowRoot.querySelector('#hryPodPrve').style.display = "none";
-        thisOne.shadowRoot.querySelector('#ineInfo').style.display = "none";
-        thisOne.shadowRoot.querySelector('#hryPrve').addEventListener('onmouseout', () => {
-            thisOne.shadowRoot.querySelector('#hryPodPrve').style.display = "block";
-            thisOne.shadowRoot.querySelector('#ineInfo').style.display = "block";
-        })
+        thisOne.shadowRoot.querySelector('#hryPodPrve').style.display = "block";
+        thisOne.shadowRoot.querySelector('#ineInfo').style.display = "block";
 
-        thisOne.shadowRoot.querySelector('#hraHanna').style.display = "none";
-        thisOne.shadowRoot.querySelector('#hraTeti').style.display = "none";
-        thisOne.shadowRoot.querySelector('#hraPatrik').style.display = "none";
-        thisOne.shadowRoot.querySelector('#hraVlad').style.display = "none";
-        thisOne.shadowRoot.querySelector('#hryPodPrve').addEventListener('onmouseout', () => {
-            thisOne.shadowRoot.querySelector('#hraHanna').style.display = "block";
-            thisOne.shadowRoot.querySelector('#hraTeti').style.display = "block";
-            thisOne.shadowRoot.querySelector('#hraPatrik').style.display = "block";
-            thisOne.shadowRoot.querySelector('#hraVlad').style.display = "block";
-        })
 
-        thisOne.shadowRoot.querySelector('#about').style.display = "none";
-        thisOne.shadowRoot.querySelector('#document').style.display = "none";
-        thisOne.shadowRoot.querySelector('#ineInfo').addEventListener('onmouseout', () => {
-            thisOne.shadowRoot.querySelector('#about').style.display = "block";
-            thisOne.shadowRoot.querySelector('#document').style.display = "block";
-        })
+        thisOne.shadowRoot.querySelector('#hraHanna').style.display = "block";
+        thisOne.shadowRoot.querySelector('#hraTeti').style.display = "block";
+        thisOne.shadowRoot.querySelector('#hraPatrik').style.display = "block";
+        thisOne.shadowRoot.querySelector('#hraVlad').style.display = "block";
+
+
+        thisOne.shadowRoot.querySelector('#about').style.display = "block";
+        thisOne.shadowRoot.querySelector('#document').style.display = "block";
+
 
 
         this.addEventListener('onmouseout', () => {
             this.setAttribute('style', 'background: #b463d4;\n' +
                 'border-color: #b463d4 !important;');
-            if (this == 'dom') {
+            if (this == dom) {
                 $('a[id="dom"]').click(function () {
                     thisOne.shadowRoot.setAttribute(href, "index.html")
                     //location.href = "index.html";
@@ -136,48 +125,48 @@ class TrojMenu extends HTMLElement {
                 // }
             } else if (this == hryMenu) {
                 $('a[id="hryPrve"]').click(function () {
-                    location.href = "games.html";
+                    thisOne.shadowRoot.setAttribute(href,"games.html");
                 });
                 if (this == hryPodMenu) {
                     $('a[id="hryPodPrve"]').click(function () {
-                        location.href = "games.html";
+                        thisOne.shadowRoot.setAttribute(href, "games.html");
                     });
                     if (this == gameH) {
-                        $('li[id="hraHanna"]').click(function () {
-                            location.href = "gameHanna.html";
+                        $('a[id="hraHanna"]').click(function () {
+                            thisOne.shadowRoot.setAttribute(href, "gameHanna.html");
                         });
                     } else if (this == gameP) {
-                        $('li[id="hraPatrik"]').click(function () {
-                            location.href = "ultraland.html";
+                        $('a[id="hraPatrik"]').click(function () {
+                            thisOne.shadowRoot.setAttribute(href, "ultraland.html");
                         });
                     } else if (this == gameT) {
-                        $('li[id="hraTeti"]').click(function () {
-                            location.href = "hraTetiana.html";
+                        $('a[id="hraTeti"]').click(function () {
+                            thisOne.shadowRoot.setAttribute(href, "hraTetiana.html");
                         });
                     } else if (this == gameV) {
-                        $('li[id="hraVlad"]').click(function () {
-                            location.href = "";
+                        $('a[id="hraVlad"]').click(function () {
+                            thisOne.shadowRoot.setAttribute(href, "");
                         });
                     }
 
                 } else if (this == Ine) {
                     $('a[id="ineInfo"]').click(function () {
-                        location.href = "ine.html";
+                        thisOne.shadowRoot.setAttribute(href, "ine.html");
                     });
                     if (this == podIne) {
-                        $('li[id="about"]').click(function () {
-                            location.href = "aboutgames.html";
+                        $('a[id="about"]').click(function () {
+                            thisOne.shadowRoot.setAttribute(href, "aboutgames.html");
                         });
                     } else if (this == Document) {
-                        $('li[id="document"]').click(function () {
-                            location.href = "documentation.html";
+                        $('a[id="document"]').click(function () {
+                            thisOne.shadowRoot.setAttribute(href, "documentation.html");
                         });
                     }
                 }
 
             } else if (this == autory) {
                 $('a[id="autor"]').click(function () {
-                    location.href = "autory.html";
+                    thisOne.shadowRoot.setAttribute(href, "autory.html");
                 });
             }
 
