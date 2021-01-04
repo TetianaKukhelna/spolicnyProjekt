@@ -72,8 +72,8 @@ class TrojMenu extends HTMLElement {
         thisOne.shadowRoot.querySelector('#hryPrve').innerHTML = poleNazov[1];
         thisOne.shadowRoot.querySelector('#hryPodPrve').innerHTML = poleNazov[2];
         thisOne.shadowRoot.querySelector('#hraHanna').innerHTML = poleNazov[3];
-        thisOne.shadowRoot.querySelector('#hraTeti').innerHTML = poleNazov[4];
-        thisOne.shadowRoot.querySelector('#hraPatrik').innerHTML = poleNazov[5];
+        thisOne.shadowRoot.querySelector('#hraPatrik').innerHTML = poleNazov[4];
+        thisOne.shadowRoot.querySelector('#hraTeti').innerHTML = poleNazov[5];
         thisOne.shadowRoot.querySelector('#hraVlad').innerHTML = poleNazov[6];
         thisOne.shadowRoot.querySelector('#ineInfo').innerHTML = poleNazov[7];
         thisOne.shadowRoot.querySelector('#about').innerHTML = poleNazov[8];
@@ -101,8 +101,8 @@ class TrojMenu extends HTMLElement {
 
 
         thisOne.shadowRoot.querySelector('#hraHanna').style.display = "block";
-        thisOne.shadowRoot.querySelector('#hraTeti').style.display = "block";
         thisOne.shadowRoot.querySelector('#hraPatrik').style.display = "block";
+        thisOne.shadowRoot.querySelector('#hraTeti').style.display = "block";
         thisOne.shadowRoot.querySelector('#hraVlad').style.display = "block";
 
 
@@ -177,48 +177,6 @@ class TrojMenu extends HTMLElement {
 
         });
 
-
-        // this.addEventListener('click', (event) => {
-        //     this.onmouseout = function () {
-        //         if(this == dom)
-        //             dom.setAttribute('style', 'background: #b463d4;\n' +
-        //                 'border-color: #b463d4 !important;');
-        //             $('a[id="dom"]').click(function () {
-        //                 location.href = "index.html";
-        //             });
-        //         else if(this == hryMenu){
-        //             hryMenu.setAttribute('style', 'background: #b463d4;\n' +
-        //                 'border-color: #b463d4 !important;');
-        //             $('a[id="hryPrve"]').click(function () {
-        //                 location.href = "index.html";
-        //             });
-        //         }
-        //     }
-        //     dom.onmouseover = function () {
-        //         dom.removeAttribute('style', 'background: #b463d4;\n' +
-        //             'border-color: #b463d4 !important;');
-        //     }
-        //
-        // });
-
-
-        // this.shadowRoot.querySelector('#textinp').addEventListener('change', () => {
-        //     var txtinput = this.shadowRoot.querySelector('#textinp');
-        //
-        //     if (txtinput.checked) {
-        //         this.shadowRoot.querySelector('#textamplitude').style.display = "block";
-        //         this.shadowRoot.querySelector('#slider-input').checked = false;
-        //         this.shadowRoot.querySelector('#slideramplitude').style.display = "none";
-        //
-        //         this.shadowRoot.querySelector('#textamplitude').addEventListener('change', () => {
-        //             this.shadowRoot.querySelector('#slideramplitude').value = this.shadowRoot.querySelector('#textamplitude').value;
-        //             textamplitude = this.shadowRoot.querySelector('#textamplitude').value;
-        //
-        //         });
-        //     } else {
-        //         this.shadowRoot.querySelector('#textamplitude').style.display = "none";
-        //     }
-        // });
     }
 }
 
