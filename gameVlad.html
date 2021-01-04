@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="img/snowflake.png">
+    <title>Projekt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/breadcrumbs.css">
+    <link rel="stylesheet" href="vladChristmasGame/style2.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script src="scripts/main_processes.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/print.css">
+    <script src="scripts/trojurovne_menu.js"></script>
+
+</head>
+<body>
+<header>
+    <div class="spinner">
+        <div class="cube1"></div>
+        <div class="cube2"></div>
+    </div>
+    <div>
+        <h1>Skupinový projekt</h1>
+    </div>
+    <div style="width: 92px; height: 60px;">
+
+    </div>
+</header>
+<troj-menu></troj-menu>
+
+
+<ul class="breadcrumbs">
+    <li class="breadcrumbsItem">
+        <a href="index.html" class="breadcrumbsLink">Domov</a>
+    </li>
+    <li class="breadcrumbsItem">
+        <a href="games.html" class="breadcrumbsLink">Hry</a>
+    </li>
+    <li class="breadcrumbsItem">
+        <a href="gameVlad.html" class="breadcrumbsLink breadcrumbsLinkActive">Vlad Chernov</a>
+    </li>
+</ul>
+
+<div>
+    <div class="row content margin-scroll" id="content">
+        <section class="col-lg-9 col-md-12 col-sm-12">
+            <button id="start">Začať hru</button>
+<!--            <button id="demo">Spusti demo</button>-->
+            <h6 id="mytimer"></h6>
+            <object class="object" data="vladChristmasGame/index.html" style="width: 100%; height: 100% "></object>
+        </section>
+        <aside id="aside" class="col-lg-3 col-md-12 col-sm-12 notlac">
+            <h3>Zisti meniny</h3>
+            <names-day></names-day>
+            <div id="nameday_date_and_name"></div>
+            <div id="nameday_find"></div>
+            <br>
+        </aside>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <a href="#" class="action-print">Vytlačiť stranku</a>
+        <hr>
+        <br>
+        <span>Copr. Hanna Hryharouskaya, Patrik Kupčulák, Tetiana Kukhelna, Vlad Chernov </span>
+        <br>
+    </div>
+</footer>
+
+<script src="vladChristmasGame/timer.js"></script>
+</body>
+</html>
