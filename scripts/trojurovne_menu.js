@@ -45,7 +45,7 @@ templateMenu.innerHTML =
                                 <li><a id="hraHanna" href="gameHanna.html"></a></li>
                                 <li><a id="hraPatrik" href="ultraland.html"></a></li>
                                 <li><a id="hraTeti" href="hraTetiana.html"></a></li>
-                                <li><a id="hraVlad" href=""></a></li>
+                                <li><a id="hraVlad" href="gameVlad.html"></a></li>
                             </ul>
                         </li>
                         <li><a id="ineInfo" href="ine.html"></a>
@@ -161,7 +161,7 @@ class TrojMenu extends HTMLElement {
                         });
                     } else if (this == gameV) {
                         $('a[id="hraVlad"]').click(function () {
-                            thisOne.shadowRoot.setAttribute(href, "");
+                            thisOne.shadowRoot.setAttribute(href, "gameVlad.html");
                         });
                     }
 
