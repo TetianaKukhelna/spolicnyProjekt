@@ -23,6 +23,7 @@ template.innerHTML =
 		    .test{
 				width: fit-content;
 				paddinng-left: 20mm;
+				display: inline-grid;
 			}
 	}
 

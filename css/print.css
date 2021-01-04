@@ -42,11 +42,13 @@ aside > .text{
  .game2{
   border: 1px solid black;
  }
+
 input{
   background-color: grey;
-  border: 2px border black;
+  border: 2px solid black;
 }
-#aside{
-  text-align: -webkit-center;
-}
+  .counter{
+    padding: 0;
+    border: none;
+  }
 }
